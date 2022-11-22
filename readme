@@ -51,4 +51,115 @@ ca.cfg From https://github.com/dogtagpki/pki/blob/master/base/server/examples/in
 
 Now, execute the following command:
 $ sudo pkispawn -f ca.cfg -s CA
+==========================================================================
+                                INSTALLATION SUMMARY
+    ==========================================================================
 
+      Administrator's username:             caadmin
+      Administrator's PKCS #12 file:
+            /root/.dogtag/pki-tomcat/ca_admin_cert.p12
+
+      To check the status of the subsystem:
+            systemctl status pki-tomcatd@pki-tomcat.service
+
+      To restart the subsystem:
+            systemctl restart pki-tomcatd@pki-tomcat.service
+
+      The URL for the subsystem is:
+            https://pki.example.com:8443/ca
+
+      PKI instances will be enabled upon system boot
+
+    ==========================================================================
+$ sudo certutil -L -d /etc/pki/pki-tomcat/alias
+
+Certificate Nickname                                         Trust Attributes
+                                                             SSL,S/MIME,JAR/XPI
+
+ca_signing                                                   CTu,Cu,Cu
+ca_ocsp_signing                                              u,u,u
+subsystem                                                    u,u,u
+ca_audit_signing                                             u,u,Pu
+sslserver                                                    u,u,u
+
+To use the admin certificate, prepare a client NSS database:
+$ pki client-init
+
+Export the CA signing certificate from the server NSS database:
+$ pki-server cert-export ca_signing --cert-file ca_signing.crt
+
+Then, import the CA signing certificate into the client NSS database:
+$ pki client-cert-import ca_signing --ca-cert ca_signing.crt
+
+Finally, import admin certificate and key with the following command:
+
+$ pki client-cert-import \
+    --pkcs12 /root/.dogtag/pki-tomcat/ca_admin_cert.p12 \
+    --pkcs12-password Secret.123
+
+To verify that the admin certificate can be used to access the CA subsystem, execute the following command:
+
+$ pki -n caadmin ca-user-show caadmin
+--------------
+User "caadmin"
+--------------
+  User ID: caadmin
+  Full name: caadmin
+  Email: caadmin@example.com
+  Type: adminType
+  State: 1
+
+-------------------------------------
+Step 5: CA, CLI request and approval
+-------------------------------------
+To request for a client certificate, use the following command:
+$ sudo pki -c Secret.123 client-cert-request uid=testuser
+[sudo] password for athul: 
+  Request ID: 0x7
+  Type: enrollment
+  Request Status: pending
+  Operation Result: success
+
+Reviewing Client Certificate Request:
+$ sudo pki -n caadmin ca-cert-request-review 7 --output-file ca_request_for_review.crt
+  Enter password for Internal Key Storage Token:  Secret.123 
+
+To approve a certificate request:
+$ pki -n caadmin ca-cert-request-approve 7
+
+  Request ID: 0x7
+  Profile: Manual User Dual-Use Certificate Enrollment
+  Type: enrollment
+  Status: pending
+
+  Key Generation:
+    cert_request_type: pkcs10
+    cert_request: -----BEGIN CERTIFICATE REQUEST-----
+MIICXzCCAUcCAQAwGjEYMBYGCgmSJomT8ixkAQEMCHRlc3R1c2VyMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAwBqtKjzhxihOYGyeG0Rm5121lDSqR45+KLjL0dxNjsVv4DQHYuVWUQsl
+lygmWDe7lU0UjpxxOtuyZR+4RtavXdfdeLaS3YVwr4m6Aiq8no6q1IQPlEMfju8s433f3ZsqKWgY
+0ZL3f7ww5FyviZqF6k3AnD4bDCpkV0qAfYxuNDcRXNEk+RHKZ9ozbCu1sNChbli5UPx2IGkh7qUE
+1FG8zXRmxzNvF5JtD6ApBgoFcAPJhfPLKvoqoDc9U0djvUSHMWqJ55IfpuTnw5pSPwIwfC8QnuTO
+6Zpaoz9D08ZhNuB7SucNfQp/QaF5ro/NotB9mGLdhy012wJ+ETFnLMTz1wIDAQABoAAwDQYJKoZI
+hvcNAQELBQADggEBAEFyaKYcBpVF8862x1WKyjCAntMyu4wgBueWt/5PGynQ8B1iez95Zb1HM60Z
+RJJnDg1zEJ56wL4T42s1TVhLGno64ZAojRCZ++0sxv0Dw5G2JlhBki0k7SbJ18/zRbgICDGK7Lng
+kBSO3V4e/SKfuW2JCmxoKiIH1rSmp6qtePjXO2xexZIndtlYhpMuBvgdKs8w46A5CqHpPCIoaZwX
+Y0ojif84Zdmk1QoUV22r/Ptidx7G3seQvHHq/66c/8QI8JHKb2u5QUdndM3yDC984oFQTyVC2qqV
+cLPCXtCqdQacOLVduVGMDz4fRC7mkOAzgv5r5vCFqQsYvO59XXzGkQE=
+-----END CERTIFICATE REQUEST-----
+
+  Subject Name:
+    sn_uid: testuser
+
+  Requestor Information:
+    none
+
+Are you sure (y/N)? y
+------------------------------
+Approved certificate request 7
+------------------------------
+  Request ID: 0x7
+  Type: enrollment
+  Request Status: complete
+  Operation Result: success
+  Certificate ID: 0x7
