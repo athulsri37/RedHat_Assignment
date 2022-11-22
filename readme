@@ -1,3 +1,54 @@
-Step 1:
-Install virtual box.  Install Fedora 37 Workstation as a Linux VM using ISO image mounted as Virtual CDROM. 
+----------------------------
+Step 1:Install virtual box  
+----------------------------
+Install Fedora 37 Workstation as a Linux VM using ISO image mounted as Virtual CDROM. 
 Once done, please follow the link to make minimize, maximize icons appear in yout screen - https://ostechnix.com/how-to-enable-minimize-and-maximize-buttons-in-fedora/
+
+-----------------------
+Step 2: Install python 
+-----------------------
+Go to https://docs.conda.io/en/latest/miniconda.html#linux-installers and click and download the "Miniconda3 Linux 64-bit" version for Python 3.8. Open the terminal and 
+go to downloads folder using cd command. Once you are in Downloads, use chmod u+x file_name.sh to make it an executable. Next, run the install script to install Miniconda.
+
+-----------------------------------------
+Step 3: Make sure FQDN is set up properly
+-----------------------------------------
+Please follow the steps mentioned in - https://github.com/dogtagpki/pki/blob/master/docs/installation/server/FQDN_Configuration.adoc 
+To configure the FQDN - If /etc/hosts does not work, use /etc/hostname. Also, do not forgot to comment to existing lines. 
+
+--------------------------------
+Step 4: Initialize the DS Server
+--------------------------------
+Follow the commands to initialize the DS Server
+
+$ sudo dnf install -y 389-ds-base
+
+$ sudo dscreate create-template ds.inf
+
+$ sudo sed -i \
+    -e "s/;instance_name = .*/instance_name = localhost/g" \
+    -e "s/;root_password = .*/root_password = Secret.123/g" \
+    -e "s/;suffix = .*/suffix = dc=example,dc=com/g" \
+    -e "s/;create_suffix_entry = .*/create_suffix_entry = True/g" \
+    -e "s/;self_sign_cert = .*/self_sign_cert = False/g" \
+    ds.inf
+
+$ sudo dscreate from-file ds.inf
+
+$ sudo ldapadd -H ldap://localhost -x -D "cn=Directory Manager" -w Secret.123 << EOF
+dn: dc=pki,dc=example,dc=com
+objectClass: domain
+dc: pki
+EOF
+
+-----------------------------
+Step 5: Initialize CA Sysyem
+-----------------------------
+To install PKI packages, execute the following command:
+$ sudo dnf install -y dogtag-pki
+
+ca.cfg From https://github.com/dogtagpki/pki/blob/master/base/server/examples/installation copy ca.cfg and save the file.
+
+Now, execute the following command:
+$ sudo pkispawn -f ca.cfg -s CA
+
