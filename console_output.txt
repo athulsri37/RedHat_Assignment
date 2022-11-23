@@ -1,0 +1,1429 @@
+(base) [athul@pki ~]$ sudo dnf install -y 389-ds-base
+[sudo] password for athul: 
+Last metadata expiration check: 0:14:02 ago on Wed 23 Nov 2022 10:26:45 AM CST.
+Dependencies resolved.
+================================================================================
+ Package                     Arch       Version               Repository   Size
+================================================================================
+Installing:
+ 389-ds-base                 x86_64     2.2.3-1.fc37          fedora      2.9 M
+Installing dependencies:
+ 389-ds-base-libs            x86_64     2.2.3-1.fc37          fedora      1.5 M
+ cyrus-sasl-md5              x86_64     2.1.28-8.fc37         fedora       43 k
+ libdb-utils                 x86_64     5.3.28-53.fc37        fedora      138 k
+ nss-tools                   x86_64     3.83.0-1.fc37         fedora      537 k
+ openldap-clients            x86_64     2.6.3-1.fc37          fedora      180 k
+ openssl                     x86_64     1:3.0.5-3.fc37        fedora      1.2 M
+ openssl-perl                x86_64     1:3.0.5-3.fc37        fedora       25 k
+ perl-Algorithm-Diff         noarch     1.2010-7.fc37         fedora       47 k
+ perl-Archive-Tar            noarch     2.40-490.fc37         fedora       71 k
+ perl-Compress-Raw-Bzip2     x86_64     2.201-2.fc37          fedora       34 k
+ perl-Compress-Raw-Lzma      x86_64     2.201-2.fc37          fedora       49 k
+ perl-Compress-Raw-Zlib      x86_64     2.202-3.fc37          fedora       64 k
+ perl-DB_File                x86_64     1.858-4.fc37          fedora       81 k
+ perl-IO-Compress            noarch     2.201-3.fc37          fedora      273 k
+ perl-IO-Compress-Lzma       noarch     2.201-2.fc37          fedora       79 k
+ perl-IO-Zlib                noarch     1:1.11-489.fc37       fedora       19 k
+ perl-Term-ReadLine          noarch     1.17-492.fc37         fedora       22 k
+ perl-Text-Diff              noarch     1.45-16.fc37          fedora       41 k
+ perl-Tie                    noarch     4.6-492.fc37          fedora       35 k
+ perl-debugger               noarch     1.60-492.fc37         fedora      137 k
+ perl-meta-notation          noarch     5.36.0-492.fc37       fedora       13 k
+ perl-sigtrap                noarch     1.10-492.fc37         fedora       19 k
+ perl-threads                x86_64     1:2.27-489.fc37       fedora       57 k
+ perl-threads-shared         x86_64     1.64-489.fc37         fedora       44 k
+ python3-ldap                x86_64     3.4.3-1.fc37          updates     284 k
+ python3-lib389              noarch     2.2.3-1.fc37          fedora      1.2 M
+ python3-pyasn1              noarch     0.4.8-11.fc37         fedora      194 k
+ python3-pyasn1-modules      noarch     0.4.8-11.fc37         fedora      324 k
+Installing weak dependencies:
+ perl-Devel-Peek             x86_64     1.32-492.fc37         fedora       35 k
+
+Transaction Summary
+================================================================================
+Install  30 Packages
+
+Total download size: 9.5 M
+Installed size: 34 M
+Downloading Packages:
+(1/30): cyrus-sasl-md5-2.1.28-8.fc37.x86_64.rpm 141 kB/s |  43 kB     00:00    
+(2/30): libdb-utils-5.3.28-53.fc37.x86_64.rpm   978 kB/s | 138 kB     00:00    
+(3/30): 389-ds-base-libs-2.2.3-1.fc37.x86_64.rp 2.0 MB/s | 1.5 MB     00:00    
+(4/30): 389-ds-base-2.2.3-1.fc37.x86_64.rpm     3.1 MB/s | 2.9 MB     00:00    
+(5/30): openldap-clients-2.6.3-1.fc37.x86_64.rp 845 kB/s | 180 kB     00:00    
+(6/30): nss-tools-3.83.0-1.fc37.x86_64.rpm      985 kB/s | 537 kB     00:00    
+(7/30): openssl-perl-3.0.5-3.fc37.x86_64.rpm    216 kB/s |  25 kB     00:00    
+(8/30): perl-Algorithm-Diff-1.2010-7.fc37.noarc 554 kB/s |  47 kB     00:00    
+(9/30): openssl-3.0.5-3.fc37.x86_64.rpm         4.9 MB/s | 1.2 MB     00:00    
+(10/30): perl-Compress-Raw-Bzip2-2.201-2.fc37.x 403 kB/s |  34 kB     00:00    
+(11/30): perl-Archive-Tar-2.40-490.fc37.noarch. 476 kB/s |  71 kB     00:00    
+(12/30): perl-Compress-Raw-Lzma-2.201-2.fc37.x8 709 kB/s |  49 kB     00:00    
+(13/30): perl-Compress-Raw-Zlib-2.202-3.fc37.x8 1.2 MB/s |  64 kB     00:00    
+(14/30): perl-DB_File-1.858-4.fc37.x86_64.rpm   1.2 MB/s |  81 kB     00:00    
+(15/30): perl-Devel-Peek-1.32-492.fc37.x86_64.r 279 kB/s |  35 kB     00:00    
+(16/30): perl-IO-Compress-Lzma-2.201-2.fc37.noa 853 kB/s |  79 kB     00:00    
+(17/30): perl-IO-Compress-2.201-3.fc37.noarch.r 1.9 MB/s | 273 kB     00:00    
+(18/30): perl-IO-Zlib-1.11-489.fc37.noarch.rpm  125 kB/s |  19 kB     00:00    
+(19/30): perl-Term-ReadLine-1.17-492.fc37.noarc 144 kB/s |  22 kB     00:00    
+(20/30): perl-Text-Diff-1.45-16.fc37.noarch.rpm 276 kB/s |  41 kB     00:00    
+(21/30): perl-Tie-4.6-492.fc37.noarch.rpm       266 kB/s |  35 kB     00:00    
+(22/30): perl-meta-notation-5.36.0-492.fc37.noa 104 kB/s |  13 kB     00:00    
+(23/30): perl-debugger-1.60-492.fc37.noarch.rpm 928 kB/s | 137 kB     00:00    
+(24/30): perl-threads-2.27-489.fc37.x86_64.rpm  562 kB/s |  57 kB     00:00    
+(25/30): perl-sigtrap-1.10-492.fc37.noarch.rpm  150 kB/s |  19 kB     00:00    
+(26/30): perl-threads-shared-1.64-489.fc37.x86_ 373 kB/s |  44 kB     00:00    
+(27/30): python3-pyasn1-0.4.8-11.fc37.noarch.rp 1.2 MB/s | 194 kB     00:00    
+(28/30): python3-pyasn1-modules-0.4.8-11.fc37.n 1.5 MB/s | 324 kB     00:00    
+(29/30): python3-lib389-2.2.3-1.fc37.noarch.rpm 2.7 MB/s | 1.2 MB     00:00    
+(30/30): python3-ldap-3.4.3-1.fc37.x86_64.rpm   445 kB/s | 284 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           2.9 MB/s | 9.5 MB     00:03     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-pyasn1-0.4.8-11.fc37.noarch                   1/30 
+  Installing       : python3-pyasn1-modules-0.4.8-11.fc37.noarch           2/30 
+  Installing       : python3-ldap-3.4.3-1.fc37.x86_64                      3/30 
+  Installing       : perl-threads-1:2.27-489.fc37.x86_64                   4/30 
+  Installing       : perl-meta-notation-5.36.0-492.fc37.noarch             5/30 
+  Installing       : perl-Compress-Raw-Zlib-2.202-3.fc37.x86_64            6/30 
+  Installing       : openssl-1:3.0.5-3.fc37.x86_64                         7/30 
+  Installing       : openssl-perl-1:3.0.5-3.fc37.x86_64                    8/30 
+  Installing       : python3-lib389-2.2.3-1.fc37.noarch                    9/30 
+  Installing       : perl-sigtrap-1.10-492.fc37.noarch                    10/30 
+  Installing       : perl-threads-shared-1.64-489.fc37.x86_64             11/30 
+  Installing       : perl-Tie-4.6-492.fc37.noarch                         12/30 
+  Installing       : perl-Term-ReadLine-1.17-492.fc37.noarch              13/30 
+  Installing       : perl-Devel-Peek-1.32-492.fc37.x86_64                 14/30 
+  Installing       : perl-debugger-1.60-492.fc37.noarch                   15/30 
+  Installing       : perl-DB_File-1.858-4.fc37.x86_64                     16/30 
+  Installing       : perl-Compress-Raw-Lzma-2.201-2.fc37.x86_64           17/30 
+  Installing       : perl-Compress-Raw-Bzip2-2.201-2.fc37.x86_64          18/30 
+  Installing       : perl-IO-Compress-2.201-3.fc37.noarch                 19/30 
+  Installing       : perl-IO-Compress-Lzma-2.201-2.fc37.noarch            20/30 
+  Installing       : perl-IO-Zlib-1:1.11-489.fc37.noarch                  21/30 
+  Installing       : perl-Algorithm-Diff-1.2010-7.fc37.noarch             22/30 
+  Installing       : perl-Text-Diff-1.45-16.fc37.noarch                   23/30 
+  Installing       : perl-Archive-Tar-2.40-490.fc37.noarch                24/30 
+  Installing       : openldap-clients-2.6.3-1.fc37.x86_64                 25/30 
+  Installing       : nss-tools-3.83.0-1.fc37.x86_64                       26/30 
+  Installing       : libdb-utils-5.3.28-53.fc37.x86_64                    27/30 
+  Installing       : cyrus-sasl-md5-2.1.28-8.fc37.x86_64                  28/30 
+  Installing       : 389-ds-base-libs-2.2.3-1.fc37.x86_64                 29/30 
+  Installing       : 389-ds-base-2.2.3-1.fc37.x86_64                      30/30 
+  Running scriptlet: 389-ds-base-2.2.3-1.fc37.x86_64                      30/30 
+  Verifying        : 389-ds-base-2.2.3-1.fc37.x86_64                       1/30 
+  Verifying        : 389-ds-base-libs-2.2.3-1.fc37.x86_64                  2/30 
+  Verifying        : cyrus-sasl-md5-2.1.28-8.fc37.x86_64                   3/30 
+  Verifying        : libdb-utils-5.3.28-53.fc37.x86_64                     4/30 
+  Verifying        : nss-tools-3.83.0-1.fc37.x86_64                        5/30 
+  Verifying        : openldap-clients-2.6.3-1.fc37.x86_64                  6/30 
+  Verifying        : openssl-1:3.0.5-3.fc37.x86_64                         7/30 
+  Verifying        : openssl-perl-1:3.0.5-3.fc37.x86_64                    8/30 
+  Verifying        : perl-Algorithm-Diff-1.2010-7.fc37.noarch              9/30 
+  Verifying        : perl-Archive-Tar-2.40-490.fc37.noarch                10/30 
+  Verifying        : perl-Compress-Raw-Bzip2-2.201-2.fc37.x86_64          11/30 
+  Verifying        : perl-Compress-Raw-Lzma-2.201-2.fc37.x86_64           12/30 
+  Verifying        : perl-Compress-Raw-Zlib-2.202-3.fc37.x86_64           13/30 
+  Verifying        : perl-DB_File-1.858-4.fc37.x86_64                     14/30 
+  Verifying        : perl-Devel-Peek-1.32-492.fc37.x86_64                 15/30 
+  Verifying        : perl-IO-Compress-2.201-3.fc37.noarch                 16/30 
+  Verifying        : perl-IO-Compress-Lzma-2.201-2.fc37.noarch            17/30 
+  Verifying        : perl-IO-Zlib-1:1.11-489.fc37.noarch                  18/30 
+  Verifying        : perl-Term-ReadLine-1.17-492.fc37.noarch              19/30 
+  Verifying        : perl-Text-Diff-1.45-16.fc37.noarch                   20/30 
+  Verifying        : perl-Tie-4.6-492.fc37.noarch                         21/30 
+  Verifying        : perl-debugger-1.60-492.fc37.noarch                   22/30 
+  Verifying        : perl-meta-notation-5.36.0-492.fc37.noarch            23/30 
+  Verifying        : perl-sigtrap-1.10-492.fc37.noarch                    24/30 
+  Verifying        : perl-threads-1:2.27-489.fc37.x86_64                  25/30 
+  Verifying        : perl-threads-shared-1.64-489.fc37.x86_64             26/30 
+  Verifying        : python3-lib389-2.2.3-1.fc37.noarch                   27/30 
+  Verifying        : python3-pyasn1-0.4.8-11.fc37.noarch                  28/30 
+  Verifying        : python3-pyasn1-modules-0.4.8-11.fc37.noarch          29/30 
+  Verifying        : python3-ldap-3.4.3-1.fc37.x86_64                     30/30 
+
+Installed:
+  389-ds-base-2.2.3-1.fc37.x86_64                                               
+  389-ds-base-libs-2.2.3-1.fc37.x86_64                                          
+  cyrus-sasl-md5-2.1.28-8.fc37.x86_64                                           
+  libdb-utils-5.3.28-53.fc37.x86_64                                             
+  nss-tools-3.83.0-1.fc37.x86_64                                                
+  openldap-clients-2.6.3-1.fc37.x86_64                                          
+  openssl-1:3.0.5-3.fc37.x86_64                                                 
+  openssl-perl-1:3.0.5-3.fc37.x86_64                                            
+  perl-Algorithm-Diff-1.2010-7.fc37.noarch                                      
+  perl-Archive-Tar-2.40-490.fc37.noarch                                         
+  perl-Compress-Raw-Bzip2-2.201-2.fc37.x86_64                                   
+  perl-Compress-Raw-Lzma-2.201-2.fc37.x86_64                                    
+  perl-Compress-Raw-Zlib-2.202-3.fc37.x86_64                                    
+  perl-DB_File-1.858-4.fc37.x86_64                                              
+  perl-Devel-Peek-1.32-492.fc37.x86_64                                          
+  perl-IO-Compress-2.201-3.fc37.noarch                                          
+  perl-IO-Compress-Lzma-2.201-2.fc37.noarch                                     
+  perl-IO-Zlib-1:1.11-489.fc37.noarch                                           
+  perl-Term-ReadLine-1.17-492.fc37.noarch                                       
+  perl-Text-Diff-1.45-16.fc37.noarch                                            
+  perl-Tie-4.6-492.fc37.noarch                                                  
+  perl-debugger-1.60-492.fc37.noarch                                            
+  perl-meta-notation-5.36.0-492.fc37.noarch                                     
+  perl-sigtrap-1.10-492.fc37.noarch                                             
+  perl-threads-1:2.27-489.fc37.x86_64                                           
+  perl-threads-shared-1.64-489.fc37.x86_64                                      
+  python3-ldap-3.4.3-1.fc37.x86_64                                              
+  python3-lib389-2.2.3-1.fc37.noarch                                            
+  python3-pyasn1-0.4.8-11.fc37.noarch                                           
+  python3-pyasn1-modules-0.4.8-11.fc37.noarch                                   
+
+Complete!
+(base) [athul@pki ~]$ sudo dscreate create-template ds.inf
+(base) [athul@pki ~]$ sudo sed -i \
+    -e "s/;instance_name = .*/instance_name = localhost/g" \
+    -e "s/;root_password = .*/root_password = Secret.123/g" \
+    -e "s/;suffix = .*/suffix = dc=example,dc=com/g" \
+    -e "s/;create_suffix_entry = .*/create_suffix_entry = True/g" \
+    -e "s/;self_sign_cert = .*/self_sign_cert = False/g" \
+    ds.inf
+(base) [athul@pki ~]$ sudo dscreate from-file ds.inf
+Starting installation ...
+Validate installation settings ...
+Create file system structures ...
+Perform SELinux labeling ...
+Create database backend: dc=example,dc=com ...
+Perform post-installation tasks ...
+Completed installation for instance: slapd-localhost
+(base) [athul@pki ~]$ sudo ldapadd -H ldap://localhost -x -D "cn=Directory Manager" -w Secret.123 << EOF
+dn: dc=pki,dc=example,dc=com
+objectClass: domain
+dc: pki
+EOF
+adding new entry "dc=pki,dc=example,dc=com"
+
+(base) [athul@pki ~]$ sudo dnf install -y dogtag-pki
+Last metadata expiration check: 0:15:20 ago on Wed 23 Nov 2022 10:26:45 AM CST.
+Dependencies resolved.
+================================================================================
+ Package                           Arch     Version             Repo       Size
+================================================================================
+Installing:
+ dogtag-pki                        x86_64   11.2.0-2.fc37       fedora    9.2 k
+Installing dependencies:
+ apache-commons-cli                noarch   1.5.0-4.fc37        fedora     75 k
+ apache-commons-codec              noarch   1.15-7.fc37         fedora    301 k
+ apache-commons-io                 noarch   1:2.11.0-2.fc37     fedora    322 k
+ apache-commons-lang3              noarch   3.12.0-7.fc37       fedora    559 k
+ apache-commons-logging            noarch   1.2-31.fc37         fedora     76 k
+ apache-commons-net                noarch   3.6-17.fc37         fedora    292 k
+ dogtag-jss                        x86_64   5.2.0-1.fc37.1      fedora    1.2 M
+ dogtag-ldapjdk                    noarch   5.2.0-1.fc37.2      fedora    341 k
+ dogtag-pki-acme                   noarch   11.2.0-2.fc37       fedora    989 k
+ dogtag-pki-base                   noarch   11.2.0-2.fc37       fedora    279 k
+ dogtag-pki-ca                     noarch   11.2.0-2.fc37       fedora    1.4 M
+ dogtag-pki-java                   noarch   11.2.0-2.fc37       fedora    631 k
+ dogtag-pki-javadoc                noarch   11.2.0-2.fc37       fedora    2.5 M
+ dogtag-pki-kra                    noarch   11.2.0-2.fc37       fedora    299 k
+ dogtag-pki-ocsp                   noarch   11.2.0-2.fc37       fedora    131 k
+ dogtag-pki-server                 noarch   11.2.0-2.fc37       fedora    2.8 M
+ dogtag-pki-theme                  noarch   11.2.0-2.fc37       fedora    1.8 M
+ dogtag-pki-tks                    noarch   11.2.0-2.fc37       fedora    127 k
+ dogtag-pki-tools                  x86_64   11.2.0-2.fc37       fedora    916 k
+ dogtag-pki-tps                    noarch   11.2.0-2.fc37       fedora    420 k
+ dogtag-tomcatjss                  noarch   8.2.0-1.fc37.2      fedora     38 k
+ ecj                               noarch   1:4.23-3.fc37       fedora    2.4 M
+ esc                               x86_64   1.1.2-13.fc37       fedora    168 k
+ freeipa-healthcheck-core          noarch   0.11-5.fc37         fedora     71 k
+ httpcomponents-client             noarch   4.5.13-5.fc37       fedora    657 k
+ httpcomponents-core               noarch   4.4.13-7.fc37       fedora    633 k
+ jackson-annotations               noarch   2.11.4-7.fc37       fedora     78 k
+ jackson-core                      noarch   2.11.4-9.fc37       fedora    352 k
+ jackson-databind                  noarch   2.11.4-8.fc37       fedora    1.3 M
+ jackson-jaxrs-json-provider       noarch   2.11.4-8.fc37       fedora     22 k
+ jackson-jaxrs-providers           noarch   2.11.4-8.fc37       fedora     45 k
+ jackson-module-jaxb-annotations   noarch   2.11.4-9.fc37       fedora     47 k
+ jakarta-activation                noarch   1.2.2-7.fc37        fedora     79 k
+ jakarta-annotations               noarch   1.3.5-14.fc37       fedora     45 k
+ javapackages-tools                noarch   6.1.0-4.fc37        fedora     37 k
+ jaxb-api                          noarch   2.3.3-8.fc37        fedora    110 k
+ jboss-jaxrs-2.0-api               noarch   1.0.0-20.fc37       fedora    112 k
+ jboss-logging                     noarch   3.4.1-13.fc37       fedora     58 k
+ jboss-logging-tools               noarch   2.2.1-10.fc37       fedora    222 k
+ jdeparser                         noarch   2.0.3-12.fc37       fedora    219 k
+ pki-resteasy-client               noarch   3.0.26-17.fc37      fedora    164 k
+ pki-resteasy-core                 noarch   3.0.26-17.fc37      fedora    807 k
+ pki-resteasy-jackson2-provider    noarch   3.0.26-17.fc37      fedora     28 k
+ publicsuffix-list                 noarch   20210518-5.fc37     fedora     82 k
+ python3-dogtag-pki                noarch   11.2.0-2.fc37       fedora    211 k
+ slf4j                             noarch   1.7.32-4.fc37       fedora     69 k
+ slf4j-jdk14                       noarch   1.7.32-4.fc37       fedora     17 k
+ tomcat                            noarch   1:9.0.68-1.fc37     updates    93 k
+ tomcat-el-3.0-api                 noarch   1:9.0.68-1.fc37     updates   102 k
+ tomcat-jsp-2.3-api                noarch   1:9.0.68-1.fc37     updates    62 k
+ tomcat-lib                        noarch   1:9.0.68-1.fc37     updates   5.9 M
+ tomcat-servlet-4.0-api            noarch   1:9.0.68-1.fc37     updates   281 k
+Installing weak dependencies:
+ tomcat-native                     x86_64   1:1.2.35-1.fc37     fedora     79 k
+
+Transaction Summary
+================================================================================
+Install  54 Packages
+
+Total download size: 30 M
+Installed size: 102 M
+Downloading Packages:
+(1/54): apache-commons-cli-1.5.0-4.fc37.noarch. 106 kB/s |  75 kB     00:00    
+(2/54): apache-commons-codec-1.15-7.fc37.noarch 223 kB/s | 301 kB     00:01    
+(3/54): apache-commons-io-2.11.0-2.fc37.noarch. 223 kB/s | 322 kB     00:01    
+(4/54): apache-commons-logging-1.2-31.fc37.noar 344 kB/s |  76 kB     00:00    
+(5/54): apache-commons-lang3-3.12.0-7.fc37.noar 484 kB/s | 559 kB     00:01    
+(6/54): apache-commons-net-3.6-17.fc37.noarch.r 404 kB/s | 292 kB     00:00    
+(7/54): dogtag-pki-11.2.0-2.fc37.x86_64.rpm      38 kB/s | 9.2 kB     00:00    
+(8/54): dogtag-jss-5.2.0-1.fc37.1.x86_64.rpm    827 kB/s | 1.2 MB     00:01    
+(9/54): dogtag-pki-base-11.2.0-2.fc37.noarch.rp 1.0 MB/s | 279 kB     00:00    
+(10/54): dogtag-pki-acme-11.2.0-2.fc37.noarch.r 1.0 MB/s | 989 kB     00:00    
+(11/54): dogtag-ldapjdk-5.2.0-1.fc37.2.noarch.r 193 kB/s | 341 kB     00:01    
+(12/54): dogtag-pki-java-11.2.0-2.fc37.noarch.r 1.1 MB/s | 631 kB     00:00    
+(13/54): dogtag-pki-ca-11.2.0-2.fc37.noarch.rpm 1.8 MB/s | 1.4 MB     00:00    
+(14/54): dogtag-pki-kra-11.2.0-2.fc37.noarch.rp 984 kB/s | 299 kB     00:00    
+(15/54): dogtag-pki-ocsp-11.2.0-2.fc37.noarch.r 590 kB/s | 131 kB     00:00    
+(16/54): dogtag-pki-theme-11.2.0-2.fc37.noarch. 2.6 MB/s | 1.8 MB     00:00    
+(17/54): dogtag-pki-tks-11.2.0-2.fc37.noarch.rp 1.1 MB/s | 127 kB     00:00    
+(18/54): dogtag-pki-javadoc-11.2.0-2.fc37.noarc 1.2 MB/s | 2.5 MB     00:02    
+(19/54): dogtag-pki-tps-11.2.0-2.fc37.noarch.rp 1.1 MB/s | 420 kB     00:00    
+(20/54): dogtag-tomcatjss-8.2.0-1.fc37.2.noarch 235 kB/s |  38 kB     00:00    
+(21/54): dogtag-pki-tools-11.2.0-2.fc37.x86_64. 768 kB/s | 916 kB     00:01    
+(22/54): esc-1.1.2-13.fc37.x86_64.rpm           490 kB/s | 168 kB     00:00    
+(23/54): freeipa-healthcheck-core-0.11-5.fc37.n 392 kB/s |  71 kB     00:00    
+(24/54): httpcomponents-client-4.5.13-5.fc37.no 891 kB/s | 657 kB     00:00    
+(25/54): httpcomponents-core-4.4.13-7.fc37.noar 1.2 MB/s | 633 kB     00:00    
+(26/54): ecj-4.23-3.fc37.noarch.rpm             1.1 MB/s | 2.4 MB     00:02    
+(27/54): jackson-annotations-2.11.4-7.fc37.noar  85 kB/s |  78 kB     00:00    
+(28/54): jackson-core-2.11.4-9.fc37.noarch.rpm  307 kB/s | 352 kB     00:01    
+(29/54): jackson-jaxrs-json-provider-2.11.4-8.f 114 kB/s |  22 kB     00:00    
+(30/54): jackson-jaxrs-providers-2.11.4-8.fc37. 221 kB/s |  45 kB     00:00    
+(31/54): jackson-module-jaxb-annotations-2.11.4 364 kB/s |  47 kB     00:00    
+(32/54): jakarta-activation-1.2.2-7.fc37.noarch 317 kB/s |  79 kB     00:00    
+(33/54): jakarta-annotations-1.3.5-14.fc37.noar 226 kB/s |  45 kB     00:00    
+(34/54): javapackages-tools-6.1.0-4.fc37.noarch 322 kB/s |  37 kB     00:00    
+(35/54): jaxb-api-2.3.3-8.fc37.noarch.rpm       473 kB/s | 110 kB     00:00    
+(36/54): jboss-jaxrs-2.0-api-1.0.0-20.fc37.noar 455 kB/s | 112 kB     00:00    
+(37/54): jboss-logging-3.4.1-13.fc37.noarch.rpm 244 kB/s |  58 kB     00:00    
+(38/54): jackson-databind-2.11.4-8.fc37.noarch. 536 kB/s | 1.3 MB     00:02    
+(39/54): jboss-logging-tools-2.2.1-10.fc37.noar 514 kB/s | 222 kB     00:00    
+(40/54): jdeparser-2.0.3-12.fc37.noarch.rpm     156 kB/s | 219 kB     00:01    
+(41/54): pki-resteasy-client-3.0.26-17.fc37.noa 118 kB/s | 164 kB     00:01    
+(42/54): pki-resteasy-jackson2-provider-3.0.26- 167 kB/s |  28 kB     00:00    
+(43/54): publicsuffix-list-20210518-5.fc37.noar 228 kB/s |  82 kB     00:00    
+(44/54): python3-dogtag-pki-11.2.0-2.fc37.noarc 369 kB/s | 211 kB     00:00    
+(45/54): pki-resteasy-core-3.0.26-17.fc37.noarc 545 kB/s | 807 kB     00:01    
+(46/54): slf4j-1.7.32-4.fc37.noarch.rpm         357 kB/s |  69 kB     00:00    
+(47/54): slf4j-jdk14-1.7.32-4.fc37.noarch.rpm    88 kB/s |  17 kB     00:00    
+(48/54): tomcat-native-1.2.35-1.fc37.x86_64.rpm 270 kB/s |  79 kB     00:00    
+(49/54): tomcat-9.0.68-1.fc37.noarch.rpm        149 kB/s |  93 kB     00:00    
+(50/54): tomcat-el-3.0-api-9.0.68-1.fc37.noarch 205 kB/s | 102 kB     00:00    
+(51/54): tomcat-jsp-2.3-api-9.0.68-1.fc37.noarc 634 kB/s |  62 kB     00:00    
+(52/54): tomcat-servlet-4.0-api-9.0.68-1.fc37.n 1.2 MB/s | 281 kB     00:00    
+(53/54): tomcat-lib-9.0.68-1.fc37.noarch.rpm    3.0 MB/s | 5.9 MB     00:01    
+(54/54): dogtag-pki-server-11.2.0-2.fc37.noarch 172 kB/s | 2.8 MB     00:16    
+--------------------------------------------------------------------------------
+Total                                           1.4 MB/s |  30 MB     00:21     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : slf4j-1.7.32-4.fc37.noarch                            1/54 
+  Installing       : javapackages-tools-6.1.0-4.fc37.noarch                2/54 
+  Installing       : slf4j-jdk14-1.7.32-4.fc37.noarch                      3/54 
+  Installing       : tomcat-servlet-4.0-api-1:9.0.68-1.fc37.noarch         4/54 
+  Running scriptlet: tomcat-servlet-4.0-api-1:9.0.68-1.fc37.noarch         4/54 
+  Installing       : jackson-core-2.11.4-9.fc37.noarch                     5/54 
+  Installing       : jaxb-api-2.3.3-8.fc37.noarch                          6/54 
+  Installing       : jackson-annotations-2.11.4-7.fc37.noarch              7/54 
+  Installing       : jackson-databind-2.11.4-8.fc37.noarch                 8/54 
+  Installing       : apache-commons-lang3-3.12.0-7.fc37.noarch             9/54 
+  Installing       : dogtag-jss-5.2.0-1.fc37.1.x86_64                     10/54 
+  Installing       : python3-dogtag-pki-11.2.0-2.fc37.noarch              11/54 
+  Installing       : dogtag-pki-base-11.2.0-2.fc37.noarch                 12/54 
+  Running scriptlet: dogtag-pki-base-11.2.0-2.fc37.noarch                 12/54 
+  Installing       : tomcat-el-3.0-api-1:9.0.68-1.fc37.noarch             13/54 
+  Running scriptlet: tomcat-el-3.0-api-1:9.0.68-1.fc37.noarch             13/54 
+  Installing       : jboss-logging-3.4.1-13.fc37.noarch                   14/54 
+  Installing       : jakarta-activation-1.2.2-7.fc37.noarch               15/54 
+  Installing       : apache-commons-io-1:2.11.0-2.fc37.noarch             16/54 
+  Installing       : apache-commons-codec-1.15-7.fc37.noarch              17/54 
+  Installing       : jackson-module-jaxb-annotations-2.11.4-9.fc37.noar   18/54 
+  Installing       : tomcat-jsp-2.3-api-1:9.0.68-1.fc37.noarch            19/54 
+  Running scriptlet: tomcat-jsp-2.3-api-1:9.0.68-1.fc37.noarch            19/54 
+  Installing       : dogtag-ldapjdk-5.2.0-1.fc37.2.noarch                 20/54 
+  Installing       : jackson-jaxrs-providers-2.11.4-8.fc37.noarch         21/54 
+  Installing       : jackson-jaxrs-json-provider-2.11.4-8.fc37.noarch     22/54 
+  Installing       : pki-resteasy-jackson2-provider-3.0.26-17.fc37.noar   23/54 
+  Installing       : jboss-jaxrs-2.0-api-1.0.0-20.fc37.noarch             24/54 
+  Installing       : tomcat-native-1:1.2.35-1.fc37.x86_64                 25/54 
+  Installing       : publicsuffix-list-20210518-5.fc37.noarch             26/54 
+  Installing       : jdeparser-2.0.3-12.fc37.noarch                       27/54 
+  Installing       : jboss-logging-tools-2.2.1-10.fc37.noarch             28/54 
+  Installing       : jakarta-annotations-1.3.5-14.fc37.noarch             29/54 
+  Installing       : httpcomponents-core-4.4.13-7.fc37.noarch             30/54 
+  Installing       : httpcomponents-client-4.5.13-5.fc37.noarch           31/54 
+  Installing       : pki-resteasy-core-3.0.26-17.fc37.noarch              32/54 
+  Installing       : pki-resteasy-client-3.0.26-17.fc37.noarch            33/54 
+  Installing       : freeipa-healthcheck-core-0.11-5.fc37.noarch          34/54 
+  Installing       : esc-1.1.2-13.fc37.x86_64                             35/54 
+  Installing       : ecj-1:4.23-3.fc37.noarch                             36/54 
+  Installing       : tomcat-lib-1:9.0.68-1.fc37.noarch                    37/54 
+  Running scriptlet: tomcat-1:9.0.68-1.fc37.noarch                        38/54 
+  Installing       : tomcat-1:9.0.68-1.fc37.noarch                        38/54 
+  Running scriptlet: tomcat-1:9.0.68-1.fc37.noarch                        38/54 
+  Installing       : dogtag-tomcatjss-8.2.0-1.fc37.2.noarch               39/54 
+  Installing       : dogtag-pki-theme-11.2.0-2.fc37.noarch                40/54 
+  Installing       : dogtag-pki-javadoc-11.2.0-2.fc37.noarch              41/54 
+  Installing       : apache-commons-net-3.6-17.fc37.noarch                42/54 
+  Installing       : apache-commons-logging-1.2-31.fc37.noarch            43/54 
+  Installing       : apache-commons-cli-1.5.0-4.fc37.noarch               44/54 
+  Installing       : dogtag-pki-java-11.2.0-2.fc37.noarch                 45/54 
+  Installing       : dogtag-pki-tools-11.2.0-2.fc37.x86_64                46/54 
+  Running scriptlet: dogtag-pki-server-11.2.0-2.fc37.noarch               47/54 
+  Installing       : dogtag-pki-server-11.2.0-2.fc37.noarch               47/54 
+  Running scriptlet: dogtag-pki-server-11.2.0-2.fc37.noarch               47/54 
+  Installing       : dogtag-pki-acme-11.2.0-2.fc37.noarch                 48/54 
+  Installing       : dogtag-pki-ca-11.2.0-2.fc37.noarch                   49/54 
+  Installing       : dogtag-pki-kra-11.2.0-2.fc37.noarch                  50/54 
+  Installing       : dogtag-pki-ocsp-11.2.0-2.fc37.noarch                 51/54 
+  Installing       : dogtag-pki-tks-11.2.0-2.fc37.noarch                  52/54 
+  Installing       : dogtag-pki-tps-11.2.0-2.fc37.noarch                  53/54 
+  Installing       : dogtag-pki-11.2.0-2.fc37.x86_64                      54/54 
+  Running scriptlet: dogtag-pki-11.2.0-2.fc37.x86_64                      54/54 
+  Verifying        : apache-commons-cli-1.5.0-4.fc37.noarch                1/54 
+  Verifying        : apache-commons-codec-1.15-7.fc37.noarch               2/54 
+  Verifying        : apache-commons-io-1:2.11.0-2.fc37.noarch              3/54 
+  Verifying        : apache-commons-lang3-3.12.0-7.fc37.noarch             4/54 
+  Verifying        : apache-commons-logging-1.2-31.fc37.noarch             5/54 
+  Verifying        : apache-commons-net-3.6-17.fc37.noarch                 6/54 
+  Verifying        : dogtag-jss-5.2.0-1.fc37.1.x86_64                      7/54 
+  Verifying        : dogtag-ldapjdk-5.2.0-1.fc37.2.noarch                  8/54 
+  Verifying        : dogtag-pki-11.2.0-2.fc37.x86_64                       9/54 
+  Verifying        : dogtag-pki-acme-11.2.0-2.fc37.noarch                 10/54 
+  Verifying        : dogtag-pki-base-11.2.0-2.fc37.noarch                 11/54 
+  Verifying        : dogtag-pki-ca-11.2.0-2.fc37.noarch                   12/54 
+  Verifying        : dogtag-pki-java-11.2.0-2.fc37.noarch                 13/54 
+  Verifying        : dogtag-pki-javadoc-11.2.0-2.fc37.noarch              14/54 
+  Verifying        : dogtag-pki-kra-11.2.0-2.fc37.noarch                  15/54 
+  Verifying        : dogtag-pki-ocsp-11.2.0-2.fc37.noarch                 16/54 
+  Verifying        : dogtag-pki-server-11.2.0-2.fc37.noarch               17/54 
+  Verifying        : dogtag-pki-theme-11.2.0-2.fc37.noarch                18/54 
+  Verifying        : dogtag-pki-tks-11.2.0-2.fc37.noarch                  19/54 
+  Verifying        : dogtag-pki-tools-11.2.0-2.fc37.x86_64                20/54 
+  Verifying        : dogtag-pki-tps-11.2.0-2.fc37.noarch                  21/54 
+  Verifying        : dogtag-tomcatjss-8.2.0-1.fc37.2.noarch               22/54 
+  Verifying        : ecj-1:4.23-3.fc37.noarch                             23/54 
+  Verifying        : esc-1.1.2-13.fc37.x86_64                             24/54 
+  Verifying        : freeipa-healthcheck-core-0.11-5.fc37.noarch          25/54 
+  Verifying        : httpcomponents-client-4.5.13-5.fc37.noarch           26/54 
+  Verifying        : httpcomponents-core-4.4.13-7.fc37.noarch             27/54 
+  Verifying        : jackson-annotations-2.11.4-7.fc37.noarch             28/54 
+  Verifying        : jackson-core-2.11.4-9.fc37.noarch                    29/54 
+  Verifying        : jackson-databind-2.11.4-8.fc37.noarch                30/54 
+  Verifying        : jackson-jaxrs-json-provider-2.11.4-8.fc37.noarch     31/54 
+  Verifying        : jackson-jaxrs-providers-2.11.4-8.fc37.noarch         32/54 
+  Verifying        : jackson-module-jaxb-annotations-2.11.4-9.fc37.noar   33/54 
+  Verifying        : jakarta-activation-1.2.2-7.fc37.noarch               34/54 
+  Verifying        : jakarta-annotations-1.3.5-14.fc37.noarch             35/54 
+  Verifying        : javapackages-tools-6.1.0-4.fc37.noarch               36/54 
+  Verifying        : jaxb-api-2.3.3-8.fc37.noarch                         37/54 
+  Verifying        : jboss-jaxrs-2.0-api-1.0.0-20.fc37.noarch             38/54 
+  Verifying        : jboss-logging-3.4.1-13.fc37.noarch                   39/54 
+  Verifying        : jboss-logging-tools-2.2.1-10.fc37.noarch             40/54 
+  Verifying        : jdeparser-2.0.3-12.fc37.noarch                       41/54 
+  Verifying        : pki-resteasy-client-3.0.26-17.fc37.noarch            42/54 
+  Verifying        : pki-resteasy-core-3.0.26-17.fc37.noarch              43/54 
+  Verifying        : pki-resteasy-jackson2-provider-3.0.26-17.fc37.noar   44/54 
+  Verifying        : publicsuffix-list-20210518-5.fc37.noarch             45/54 
+  Verifying        : python3-dogtag-pki-11.2.0-2.fc37.noarch              46/54 
+  Verifying        : slf4j-1.7.32-4.fc37.noarch                           47/54 
+  Verifying        : slf4j-jdk14-1.7.32-4.fc37.noarch                     48/54 
+  Verifying        : tomcat-native-1:1.2.35-1.fc37.x86_64                 49/54 
+  Verifying        : tomcat-1:9.0.68-1.fc37.noarch                        50/54 
+  Verifying        : tomcat-el-3.0-api-1:9.0.68-1.fc37.noarch             51/54 
+  Verifying        : tomcat-jsp-2.3-api-1:9.0.68-1.fc37.noarch            52/54 
+  Verifying        : tomcat-lib-1:9.0.68-1.fc37.noarch                    53/54 
+  Verifying        : tomcat-servlet-4.0-api-1:9.0.68-1.fc37.noarch        54/54 
+
+Installed:
+  apache-commons-cli-1.5.0-4.fc37.noarch                                        
+  apache-commons-codec-1.15-7.fc37.noarch                                       
+  apache-commons-io-1:2.11.0-2.fc37.noarch                                      
+  apache-commons-lang3-3.12.0-7.fc37.noarch                                     
+  apache-commons-logging-1.2-31.fc37.noarch                                     
+  apache-commons-net-3.6-17.fc37.noarch                                         
+  dogtag-jss-5.2.0-1.fc37.1.x86_64                                              
+  dogtag-ldapjdk-5.2.0-1.fc37.2.noarch                                          
+  dogtag-pki-11.2.0-2.fc37.x86_64                                               
+  dogtag-pki-acme-11.2.0-2.fc37.noarch                                          
+  dogtag-pki-base-11.2.0-2.fc37.noarch                                          
+  dogtag-pki-ca-11.2.0-2.fc37.noarch                                            
+  dogtag-pki-java-11.2.0-2.fc37.noarch                                          
+  dogtag-pki-javadoc-11.2.0-2.fc37.noarch                                       
+  dogtag-pki-kra-11.2.0-2.fc37.noarch                                           
+  dogtag-pki-ocsp-11.2.0-2.fc37.noarch                                          
+  dogtag-pki-server-11.2.0-2.fc37.noarch                                        
+  dogtag-pki-theme-11.2.0-2.fc37.noarch                                         
+  dogtag-pki-tks-11.2.0-2.fc37.noarch                                           
+  dogtag-pki-tools-11.2.0-2.fc37.x86_64                                         
+  dogtag-pki-tps-11.2.0-2.fc37.noarch                                           
+  dogtag-tomcatjss-8.2.0-1.fc37.2.noarch                                        
+  ecj-1:4.23-3.fc37.noarch                                                      
+  esc-1.1.2-13.fc37.x86_64                                                      
+  freeipa-healthcheck-core-0.11-5.fc37.noarch                                   
+  httpcomponents-client-4.5.13-5.fc37.noarch                                    
+  httpcomponents-core-4.4.13-7.fc37.noarch                                      
+  jackson-annotations-2.11.4-7.fc37.noarch                                      
+  jackson-core-2.11.4-9.fc37.noarch                                             
+  jackson-databind-2.11.4-8.fc37.noarch                                         
+  jackson-jaxrs-json-provider-2.11.4-8.fc37.noarch                              
+  jackson-jaxrs-providers-2.11.4-8.fc37.noarch                                  
+  jackson-module-jaxb-annotations-2.11.4-9.fc37.noarch                          
+  jakarta-activation-1.2.2-7.fc37.noarch                                        
+  jakarta-annotations-1.3.5-14.fc37.noarch                                      
+  javapackages-tools-6.1.0-4.fc37.noarch                                        
+  jaxb-api-2.3.3-8.fc37.noarch                                                  
+  jboss-jaxrs-2.0-api-1.0.0-20.fc37.noarch                                      
+  jboss-logging-3.4.1-13.fc37.noarch                                            
+  jboss-logging-tools-2.2.1-10.fc37.noarch                                      
+  jdeparser-2.0.3-12.fc37.noarch                                                
+  pki-resteasy-client-3.0.26-17.fc37.noarch                                     
+  pki-resteasy-core-3.0.26-17.fc37.noarch                                       
+  pki-resteasy-jackson2-provider-3.0.26-17.fc37.noarch                          
+  publicsuffix-list-20210518-5.fc37.noarch                                      
+  python3-dogtag-pki-11.2.0-2.fc37.noarch                                       
+  slf4j-1.7.32-4.fc37.noarch                                                    
+  slf4j-jdk14-1.7.32-4.fc37.noarch                                              
+  tomcat-1:9.0.68-1.fc37.noarch                                                 
+  tomcat-el-3.0-api-1:9.0.68-1.fc37.noarch                                      
+  tomcat-jsp-2.3-api-1:9.0.68-1.fc37.noarch                                     
+  tomcat-lib-1:9.0.68-1.fc37.noarch                                             
+  tomcat-native-1:1.2.35-1.fc37.x86_64                                          
+  tomcat-servlet-4.0-api-1:9.0.68-1.fc37.noarch                                 
+
+Complete!
+(base) [athul@pki ~]$ sudo pkispawn -f ca.cfg -s CA
+Loading deployment configuration from ca.cfg.
+Installing CA into /var/lib/pki/pki-tomcat.
+/usr/lib/python3.11/site-packages/urllib3/connection.py:458: SubjectAltNameWarning: Certificate for pki.example.com has no `subjectAltName`, falling back to check for a `commonName` for now. This feature is being removed by major browsers and deprecated by RFC 2818. (See https://github.com/urllib3/urllib3/issues/497 for details.)
+  warnings.warn(
+
+    ==========================================================================
+                                INSTALLATION SUMMARY
+    ==========================================================================
+
+      Administrator's username:             caadmin
+      Administrator's PKCS #12 file:
+            /root/.dogtag/pki-tomcat/ca_admin_cert.p12
+
+      To check the status of the subsystem:
+            systemctl status pki-tomcatd@pki-tomcat.service
+
+      To restart the subsystem:
+            systemctl restart pki-tomcatd@pki-tomcat.service
+
+      The URL for the subsystem is:
+            https://pki.example.com:8443/ca
+
+      PKI instances will be enabled upon system boot
+
+    ==========================================================================
+
+(base) [athul@pki ~]$ certutil -L -d /etc/pki/pki-tomcat/alias
+certutil: function failed: SEC_ERROR_BAD_DATABASE: security library: bad database.
+(base) [athul@pki ~]$ sudo certutil -L -d /etc/pki/pki-tomcat/alias
+
+Certificate Nickname                                         Trust Attributes
+                                                             SSL,S/MIME,JAR/XPI
+
+ca_signing                                                   CTu,Cu,Cu
+ca_ocsp_signing                                              u,u,u
+subsystem                                                    u,u,u
+ca_audit_signing                                             u,u,Pu
+sslserver                                                    u,u,u
+(base) [athul@pki ~]$ pki client-init
+(base) [athul@pki ~]$ sudo pki-server cert-export ca_signing --cert-file ca_signing.crt
+(base) [athul@pki ~]$ pki client-cert-import ca_signing --ca-cert ca_signing.crt
+Imported certificate "ca_signing"
+(base) [athul@pki ~]$ sudo cp /root/.dogtag/pki-tomcat/ca_admin_cert.p12 .
+(base) [athul@pki ~]$ sudo ^Cmod 755 ca_admin_cert.p12
+(base) [athul@pki ~]$ sudo chmod 755 ca_admin_cert.p12
+(base) [athul@pki ~]$ pki client-cert-import \
+    --pkcs12 ca_admin_cert.p12 \
+    --pkcs12-password Secret.123
+Imported certificates from PKCS #12 file
+(base) [athul@pki ~]$ pki -n caadmin ca-user-show caadmin
+--------------
+User "caadmin"
+--------------
+  User ID: caadmin
+  Full name: caadmin
+  Email: caadmin@example.com
+  Type: adminType
+  State: 1
+(base) [athul@pki ~]$ 
+(base) [athul@pki ~]$ 
+(base) [athul@pki ~]$ sudo pki -c Secret.123 client-cert-request uid=testuser
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createTempFile(File.java:2170)
+	at com.netscape.cmstools.client.ClientCertRequestCLI.generatePkcs10Request(ClientCertRequestCLI.java:403)
+	at com.netscape.cmstools.client.ClientCertRequestCLI.execute(ClientCertRequestCLI.java:257)
+	at org.dogtagpki.cli.CommandCLI.execute(CommandCLI.java:58)
+	at org.dogtagpki.cli.CLI.execute(CLI.java:357)
+	at org.dogtagpki.cli.CLI.execute(CLI.java:357)
+	at com.netscape.cmstools.cli.MainCLI.execute(MainCLI.java:658)
+	at com.netscape.cmstools.cli.MainCLI.main(MainCLI.java:696)
+(base) [athul@pki ~]$  pki -c Secret.123 client-cert-request uid=testuser
+  Request ID: 0x7
+  Type: enrollment
+  Request Status: pending
+  Operation Result: success
+(base) [athul@pki ~]$ pki -n caadmin ca-cert-request-approve 7
+  Request ID: 0x7
+  Profile: Manual User Dual-Use Certificate Enrollment
+  Type: enrollment
+  Status: pending
+
+  Key Generation:
+    cert_request_type: pkcs10
+    cert_request: -----BEGIN CERTIFICATE REQUEST-----
+MIICXzCCAUcCAQAwGjEYMBYGCgmSJomT8ixkAQEMCHRlc3R1c2VyMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA1PLhwTM3NRASwW3f9PiPATEPufB7M1Nzy6fvsNr8XGFcZcfRMAsB5Miu
+Xc8he2EMOz7GH8B4eN+z/+SAhS7ocuDBo9i+HE5DX4LvxxaWI0tXkGsV9HGK/97gGz42DDc2/HFs
+yQ9blm/nFDv5jDFjXj3nip36QAzBRwa+a01t92dQOBn7twpNfaw4bzCgCjj4UN6Coap1QMXk55m3
+Z3cjyy7NmWpJ7d++RC3DxaiCq/4gBjbm39ZEaH7fE/hoFOTxUB9QeesdLRkqTGLH7CfEjkn9/xwM
+Te+T/AWXkptYgw2I1Sa0dCS+jrrZo0fL1Euu0mD/At47C/XUO/KdurCBeQIDAQABoAAwDQYJKoZI
+hvcNAQELBQADggEBALD4v1/3857CLmGntp29Fg9+wBXPR2ME6ZMbxnOO/yRWPKRqwqhOk3qSctWi
+YlaQVBNiPHCjMgSmeQy/PJ1+j70x8lWb/UJCVh+ZgdixBSsj0deXf1xtpngz6lrvFmTAwpJhuPCh
+dubG6EUZCqkQVWCcDYViDDO+PR/p7nNqisvizhEboxoz3ll4zmF84Bn6q9jJURH7lCycOMEtikH5
+7GKmiOpp867Li0GlLkXWISDhfmquwqLbjkdmSRXNVVE9F3bgk1eJczDGpvUptQ7VG9nQ3M/dk2Lr
+T5w27gU1zchv80hhDWZk1Txctw7HT8RqOp5fRgN8IfEkyudan0NyduU=
+-----END CERTIFICATE REQUEST-----
+
+  Subject Name:
+    sn_uid: testuser
+
+  Requestor Information:
+    none
+
+Are you sure (y/N)? y
+------------------------------
+Approved certificate request 7
+------------------------------
+  Request ID: 0x7
+  Type: enrollment
+  Request Status: complete
+  Operation Result: success
+  Certificate ID: 0x7
+(base) [athul@pki ~]$ sudo dnf install "@C Development Tools and Libraries" openldap-devel \
+    python3-devel python3-tox \
+    lcov clang-analyzer valgrind
+Last metadata expiration check: 0:25:15 ago on Wed 23 Nov 2022 10:26:45 AM CST.
+Dependencies resolved.
+==========================================================================================================================
+ Package                                Architecture        Version                            Repository            Size
+==========================================================================================================================
+Installing:
+ clang-analyzer                         noarch              15.0.4-1.fc37                      updates              145 k
+ lcov                                   noarch              1.14-8.fc37                        fedora               100 k
+ openldap-devel                         x86_64              2.6.3-1.fc37                       fedora               734 k
+ python3-devel                          x86_64              3.11.0-1.fc37                      fedora               269 k
+ tox                                    noarch              3.26.0-1.fc37                      fedora               253 k
+Installing group/module packages:
+ autoconf                               noarch              2.71-4.fc37                        updates              733 k
+ automake                               noarch              1.16.5-9.fc37                      fedora               696 k
+ bison                                  x86_64              3.8.2-3.fc37                       fedora               1.0 M
+ byacc                                  x86_64              2.0.20220128-2.fc37                fedora               116 k
+ ccache                                 x86_64              4.6.1-2.fc37                       fedora               597 k
+ cscope                                 x86_64              15.9-17.fc37                       updates              287 k
+ flex                                   x86_64              2.6.4-11.fc37                      fedora               313 k
+ gcc-c++                                x86_64              12.2.1-2.fc37                      fedora                13 M
+ indent                                 x86_64              2.2.12-10.fc37                     fedora               187 k
+ libtool                                x86_64              2.4.7-2.fc37                       fedora               601 k
+ ltrace                                 x86_64              0.7.91-46.fc37                     fedora               136 k
+ perf                                   x86_64              6.0.5-300.fc37                     fedora               2.5 M
+ strace                                 x86_64              5.16-1.fc36                        fedora               1.4 M
+ valgrind                               x86_64              1:3.20.0-1.fc37                    updates              4.9 M
+Installing dependencies:
+ annobin-docs                           noarch              10.92-1.fc37                       updates               92 k
+ annobin-plugin-gcc                     x86_64              10.92-1.fc37                       updates              888 k
+ ansible-srpm-macros                    noarch              1-8.1.fc37                         updates              8.6 k
+ clang                                  x86_64              15.0.4-1.fc37                      updates               74 k
+ clang-libs                             x86_64              15.0.4-1.fc37                      updates               21 M
+ clang-resource-filesystem              x86_64              15.0.4-1.fc37                      updates               12 k
+ cyrus-sasl-devel                       x86_64              2.1.28-8.fc37                      fedora               112 k
+ dwz                                    x86_64              0.14-7.fc37                        fedora               129 k
+ ed                                     x86_64              1.18-2.fc37                        fedora                78 k
+ efi-srpm-macros                        noarch              5-6.fc37                           fedora                22 k
+ fonts-srpm-macros                      noarch              1:2.0.5-9.fc37                     fedora                26 k
+ fpc-srpm-macros                        noarch              1.3-6.fc37                         fedora               7.7 k
+ gcc-plugin-annobin                     x86_64              12.2.1-2.fc37                      fedora                51 k
+ ghc-srpm-macros                        noarch              1.5.0-7.fc37                       fedora               7.8 k
+ gnat-srpm-macros                       noarch              4-16.fc37                          fedora               8.3 k
+ go-srpm-macros                         noarch              3.2.0-1.fc37                       fedora                27 k
+ hiredis                                x86_64              1.0.2-3.fc37                       fedora                42 k
+ kernel-srpm-macros                     noarch              1.0-15.fc37                        fedora               9.4 k
+ libstdc++-devel                        x86_64              12.2.1-2.fc37                      fedora               2.5 M
+ libtraceevent                          x86_64              1.5.3-3.fc37                       fedora               238 k
+ llvm                                   x86_64              15.0.0-1.fc37                      fedora                14 M
+ lua-srpm-macros                        noarch              1-7.fc37                           fedora               8.8 k
+ m4                                     x86_64              1.4.19-4.fc37                      fedora               303 k
+ nim-srpm-macros                        noarch              3-7.fc37                           fedora               8.4 k
+ ocaml-srpm-macros                      noarch              7-2.fc37                           fedora                13 k
+ openblas-srpm-macros                   noarch              2-12.fc37                          fedora               7.5 k
+ openssl1.1                             x86_64              1:1.1.1q-2.fc37                    fedora               1.5 M
+ package-notes-srpm-macros              noarch              0.5-6.fc37                         fedora                11 k
+ perl-File-Compare                      noarch              1.100.700-492.fc37                 fedora                16 k
+ perl-File-Copy                         noarch              2.39-492.fc37                      fedora                23 k
+ perl-FindBin                           noarch              1.53-492.fc37                      fedora                17 k
+ perl-GD                                x86_64              2.76-3.fc37                        fedora               181 k
+ perl-Hash-Util                         x86_64              0.28-492.fc37                      fedora                37 k
+ perl-Hash-Util-FieldHash               x86_64              1.26-492.fc37                      fedora                41 k
+ perl-JSON                              noarch              4.09-1.fc37                        fedora                97 k
+ perl-Math-BigInt                       noarch              1:1.9998.37-2.fc37                 fedora               206 k
+ perl-Math-BigRat                       noarch              0.2624-2.fc37                      fedora                42 k
+ perl-Math-Complex                      noarch              1.59-492.fc37                      fedora                50 k
+ perl-PerlIO-gzip                       x86_64              0.20-19.fc37                       fedora                26 k
+ perl-Sys-Hostname                      x86_64              1.24-492.fc37                      fedora                20 k
+ perl-Thread-Queue                      noarch              3.14-489.fc37                      fedora                21 k
+ perl-srpm-macros                       noarch              1-46.fc37                          fedora               8.3 k
+ pypy                                   x86_64              7.3.9-4.fc37                       fedora                13 k
+ pypy-libs                              x86_64              7.3.9-4.fc37                       fedora                23 M
+ pypy3.8                                x86_64              7.3.9-5.3.8.fc37                   updates               11 M
+ pypy3.8-libs                           x86_64              7.3.9-5.3.8.fc37                   updates               14 M
+ pypy3.9                                x86_64              7.3.9-4.3.9.fc37                   updates               14 k
+ pypy3.9-libs                           x86_64              7.3.9-4.3.9.fc37                   updates               17 M
+ python-srpm-macros                     noarch              3.11-5.fc37                        updates               24 k
+ python-wheel-wheel                     noarch              1:0.37.1-4.fc37                    fedora                42 k
+ python3-distlib                        noarch              0.3.4-5.fc37                       fedora               270 k
+ python3-filelock                       noarch              3.7.1-1.fc37                       fedora                40 k
+ python3-platformdirs                   noarch              2.5.2-3.fc37                       fedora                42 k
+ python3-pluggy                         noarch              1.0.0-5.fc37                       fedora                45 k
+ python3-py                             noarch              1.11.0-5.fc37                      fedora               268 k
+ python3-virtualenv                     noarch              20.15.1-2.fc37                     fedora               355 k
+ python3.10-libs                        x86_64              3.10.8-3.fc37                      updates              7.8 M
+ python3.12                             x86_64              3.12.0~a1-2.fc37                   updates               23 k
+ python3.12-libs                        x86_64              3.12.0~a1-2.fc37                   updates              9.6 M
+ qt5-srpm-macros                        noarch              5.15.7-1.fc37                      updates              7.9 k
+ redhat-rpm-config                      noarch              228-1.fc37                         fedora                81 k
+ rpmautospec-rpm-macros                 noarch              0.3.0-1.fc37                       fedora               8.8 k
+ rust-srpm-macros                       noarch              23-1.fc37                          updates              9.4 k
+ slang                                  x86_64              2.3.3-1.fc37                       fedora               423 k
+ tix                                    x86_64              1:8.4.3-34.fc37                    fedora               273 k
+ tk                                     x86_64              1:8.6.12-3.fc37                    fedora               1.6 M
+Installing weak dependencies:
+ compiler-rt                            x86_64              15.0.4-1.fc37                      updates              2.8 M
+ libomp                                 x86_64              15.0.4-1.fc37                      updates              499 k
+ libomp-devel                           x86_64              15.0.4-1.fc37                      updates              358 k
+ pypy-devel                             x86_64              7.3.9-4.fc37                       fedora                79 k
+ pypy3.8-devel                          x86_64              7.3.9-5.3.8.fc37                   updates               74 k
+ pypy3.9-devel                          x86_64              7.3.9-4.3.9.fc37                   updates              133 k
+ python2.7                              x86_64              2.7.18-25.fc37                     fedora                13 M
+ python3-pip                            noarch              22.2.2-2.fc37                      fedora               3.1 M
+ python3.10                             x86_64              3.10.8-3.fc37                      updates               27 k
+ python3.10-tkinter                     x86_64              3.10.8-3.fc37                      updates              347 k
+ python3.12-devel                       x86_64              3.12.0~a1-2.fc37                   updates              278 k
+ python3.12-tkinter                     x86_64              3.12.0~a1-2.fc37                   updates              410 k
+ python3.6                              x86_64              3.6.15-14.fc37                     updates               19 M
+ python3.7                              x86_64              3.7.15-2.fc37                      updates               18 M
+ python3.8                              x86_64              3.8.15-2.fc37                      updates               17 M
+ python3.9                              x86_64              3.9.15-2.fc37                      updates               19 M
+Installing Groups:
+ C Development Tools and Libraries                                                                                       
+
+Transaction Summary
+==========================================================================================================================
+Install  101 Packages
+
+Total download size: 249 M
+Installed size: 1.2 G
+Is this ok [y/N]: y
+Downloading Packages:
+(1/101): byacc-2.0.20220128-2.fc37.x86_64.rpm                                             277 kB/s | 116 kB     00:00    
+(2/101): automake-1.16.5-9.fc37.noarch.rpm                                                869 kB/s | 696 kB     00:00    
+(3/101): ccache-4.6.1-2.fc37.x86_64.rpm                                                   1.3 MB/s | 597 kB     00:00    
+(4/101): bison-3.8.2-3.fc37.x86_64.rpm                                                    1.0 MB/s | 1.0 MB     00:00    
+(5/101): cyrus-sasl-devel-2.1.28-8.fc37.x86_64.rpm                                        608 kB/s | 112 kB     00:00    
+(6/101): dwz-0.14-7.fc37.x86_64.rpm                                                       1.1 MB/s | 129 kB     00:00    
+(7/101): efi-srpm-macros-5-6.fc37.noarch.rpm                                              273 kB/s |  22 kB     00:00    
+(8/101): ed-1.18-2.fc37.x86_64.rpm                                                        667 kB/s |  78 kB     00:00    
+(9/101): fonts-srpm-macros-2.0.5-9.fc37.noarch.rpm                                        292 kB/s |  26 kB     00:00    
+(10/101): fpc-srpm-macros-1.3-6.fc37.noarch.rpm                                            70 kB/s | 7.7 kB     00:00    
+(11/101): flex-2.6.4-11.fc37.x86_64.rpm                                                   1.5 MB/s | 313 kB     00:00    
+(12/101): gcc-plugin-annobin-12.2.1-2.fc37.x86_64.rpm                                     463 kB/s |  51 kB     00:00    
+(13/101): ghc-srpm-macros-1.5.0-7.fc37.noarch.rpm                                          91 kB/s | 7.8 kB     00:00    
+(14/101): gnat-srpm-macros-4-16.fc37.noarch.rpm                                            73 kB/s | 8.3 kB     00:00    
+(15/101): go-srpm-macros-3.2.0-1.fc37.noarch.rpm                                          234 kB/s |  27 kB     00:00    
+(16/101): hiredis-1.0.2-3.fc37.x86_64.rpm                                                 380 kB/s |  42 kB     00:00    
+(17/101): indent-2.2.12-10.fc37.x86_64.rpm                                                1.5 MB/s | 187 kB     00:00    
+(18/101): kernel-srpm-macros-1.0-15.fc37.noarch.rpm                                        84 kB/s | 9.4 kB     00:00    
+(19/101): lcov-1.14-8.fc37.noarch.rpm                                                     842 kB/s | 100 kB     00:00    
+(20/101): libtool-2.4.7-2.fc37.x86_64.rpm                                                 1.9 MB/s | 601 kB     00:00    
+(21/101): libtraceevent-1.5.3-3.fc37.x86_64.rpm                                           1.1 MB/s | 238 kB     00:00    
+(22/101): libstdc++-devel-12.2.1-2.fc37.x86_64.rpm                                        2.2 MB/s | 2.5 MB     00:01    
+(23/101): ltrace-0.7.91-46.fc37.x86_64.rpm                                                882 kB/s | 136 kB     00:00    
+(24/101): lua-srpm-macros-1-7.fc37.noarch.rpm                                              93 kB/s | 8.8 kB     00:00    
+(25/101): m4-1.4.19-4.fc37.x86_64.rpm                                                     1.1 MB/s | 303 kB     00:00    
+(26/101): nim-srpm-macros-3-7.fc37.noarch.rpm                                              59 kB/s | 8.4 kB     00:00    
+(27/101): ocaml-srpm-macros-7-2.fc37.noarch.rpm                                           156 kB/s |  13 kB     00:00    
+(28/101): openblas-srpm-macros-2-12.fc37.noarch.rpm                                        90 kB/s | 7.5 kB     00:00    
+(29/101): gcc-c++-12.2.1-2.fc37.x86_64.rpm                                                4.1 MB/s |  13 MB     00:03    
+(30/101): openldap-devel-2.6.3-1.fc37.x86_64.rpm                                          1.3 MB/s | 734 kB     00:00    
+(31/101): package-notes-srpm-macros-0.5-6.fc37.noarch.rpm                                  85 kB/s |  11 kB     00:00    
+(32/101): openssl1.1-1.1.1q-2.fc37.x86_64.rpm                                             3.2 MB/s | 1.5 MB     00:00    
+(33/101): perl-File-Compare-1.100.700-492.fc37.noarch.rpm                                 135 kB/s |  16 kB     00:00    
+(34/101): perl-File-Copy-2.39-492.fc37.noarch.rpm                                         226 kB/s |  23 kB     00:00    
+(35/101): llvm-15.0.0-1.fc37.x86_64.rpm                                                   4.6 MB/s |  14 MB     00:03    
+(36/101): perl-FindBin-1.53-492.fc37.noarch.rpm                                            56 kB/s |  17 kB     00:00    
+(37/101): perf-6.0.5-300.fc37.x86_64.rpm                                                  2.6 MB/s | 2.5 MB     00:00    
+(38/101): perl-Hash-Util-0.28-492.fc37.x86_64.rpm                                         216 kB/s |  37 kB     00:00    
+(39/101): perl-GD-2.76-3.fc37.x86_64.rpm                                                  879 kB/s | 181 kB     00:00    
+(40/101): perl-Hash-Util-FieldHash-1.26-492.fc37.x86_64.rpm                               345 kB/s |  41 kB     00:00    
+(41/101): perl-JSON-4.09-1.fc37.noarch.rpm                                                601 kB/s |  97 kB     00:00    
+(42/101): perl-Math-BigInt-1.9998.37-2.fc37.noarch.rpm                                    953 kB/s | 206 kB     00:00    
+(43/101): perl-Math-BigRat-0.2624-2.fc37.noarch.rpm                                       225 kB/s |  42 kB     00:00    
+(44/101): perl-Math-Complex-1.59-492.fc37.noarch.rpm                                      235 kB/s |  50 kB     00:00    
+(45/101): perl-PerlIO-gzip-0.20-19.fc37.x86_64.rpm                                        118 kB/s |  26 kB     00:00    
+(46/101): perl-Sys-Hostname-1.24-492.fc37.x86_64.rpm                                       84 kB/s |  20 kB     00:00    
+(47/101): perl-Thread-Queue-3.14-489.fc37.noarch.rpm                                      115 kB/s |  21 kB     00:00    
+(48/101): perl-srpm-macros-1-46.fc37.noarch.rpm                                            70 kB/s | 8.3 kB     00:00    
+(49/101): pypy-7.3.9-4.fc37.x86_64.rpm                                                    132 kB/s |  13 kB     00:00    
+(50/101): pypy-devel-7.3.9-4.fc37.x86_64.rpm                                              711 kB/s |  79 kB     00:00    
+(51/101): python-wheel-wheel-0.37.1-4.fc37.noarch.rpm                                     349 kB/s |  42 kB     00:00    
+(52/101): python3-devel-3.11.0-1.fc37.x86_64.rpm                                          1.3 MB/s | 269 kB     00:00    
+(53/101): python3-distlib-0.3.4-5.fc37.noarch.rpm                                         1.3 MB/s | 270 kB     00:00    
+(54/101): python3-filelock-3.7.1-1.fc37.noarch.rpm                                        371 kB/s |  40 kB     00:00    
+(55/101): python3-pip-22.2.2-2.fc37.noarch.rpm                                            5.9 MB/s | 3.1 MB     00:00    
+(56/101): python3-platformdirs-2.5.2-3.fc37.noarch.rpm                                    277 kB/s |  42 kB     00:00    
+(57/101): python3-pluggy-1.0.0-5.fc37.noarch.rpm                                          288 kB/s |  45 kB     00:00    
+(58/101): python3-py-1.11.0-5.fc37.noarch.rpm                                             2.0 MB/s | 268 kB     00:00    
+(59/101): python3-virtualenv-20.15.1-2.fc37.noarch.rpm                                    1.5 MB/s | 355 kB     00:00    
+(60/101): redhat-rpm-config-228-1.fc37.noarch.rpm                                         795 kB/s |  81 kB     00:00    
+(61/101): rpmautospec-rpm-macros-0.3.0-1.fc37.noarch.rpm                                  100 kB/s | 8.8 kB     00:00    
+(62/101): python2.7-2.7.18-25.fc37.x86_64.rpm                                             6.1 MB/s |  13 MB     00:02    
+(63/101): slang-2.3.3-1.fc37.x86_64.rpm                                                   2.0 MB/s | 423 kB     00:00    
+(64/101): tix-8.4.3-34.fc37.x86_64.rpm                                                    1.9 MB/s | 273 kB     00:00    
+(65/101): pypy-libs-7.3.9-4.fc37.x86_64.rpm                                               8.1 MB/s |  23 MB     00:02    
+(66/101): strace-5.16-1.fc36.x86_64.rpm                                                   2.5 MB/s | 1.4 MB     00:00    
+(67/101): tk-8.6.12-3.fc37.x86_64.rpm                                                     3.1 MB/s | 1.6 MB     00:00    
+(68/101): tox-3.26.0-1.fc37.noarch.rpm                                                    1.2 MB/s | 253 kB     00:00    
+(69/101): ansible-srpm-macros-1-8.1.fc37.noarch.rpm                                        38 kB/s | 8.6 kB     00:00    
+(70/101): annobin-docs-10.92-1.fc37.noarch.rpm                                            141 kB/s |  92 kB     00:00    
+(71/101): clang-15.0.4-1.fc37.x86_64.rpm                                                  350 kB/s |  74 kB     00:00    
+(72/101): clang-analyzer-15.0.4-1.fc37.noarch.rpm                                         553 kB/s | 145 kB     00:00    
+(73/101): autoconf-2.71-4.fc37.noarch.rpm                                                 713 kB/s | 733 kB     00:01    
+(74/101): annobin-plugin-gcc-10.92-1.fc37.x86_64.rpm                                      630 kB/s | 888 kB     00:01    
+(75/101): clang-resource-filesystem-15.0.4-1.fc37.x86_64.rpm                               82 kB/s |  12 kB     00:00    
+(76/101): cscope-15.9-17.fc37.x86_64.rpm                                                  753 kB/s | 287 kB     00:00    
+(77/101): libomp-15.0.4-1.fc37.x86_64.rpm                                                 473 kB/s | 499 kB     00:01    
+(78/101): clang-libs-15.0.4-1.fc37.x86_64.rpm                                             9.5 MB/s |  21 MB     00:02    
+(79/101): libomp-devel-15.0.4-1.fc37.x86_64.rpm                                           798 kB/s | 358 kB     00:00    
+(80/101): pypy3.8-devel-7.3.9-5.3.8.fc37.x86_64.rpm                                       301 kB/s |  74 kB     00:00    
+(81/101): compiler-rt-15.0.4-1.fc37.x86_64.rpm                                            1.2 MB/s | 2.8 MB     00:02    
+(82/101): pypy3.9-7.3.9-4.3.9.fc37.x86_64.rpm                                              66 kB/s |  14 kB     00:00    
+(83/101): pypy3.8-7.3.9-5.3.8.fc37.x86_64.rpm                                              11 MB/s |  11 MB     00:00    
+(84/101): pypy3.9-devel-7.3.9-4.3.9.fc37.x86_64.rpm                                       411 kB/s | 133 kB     00:00    
+(85/101): python-srpm-macros-3.11-5.fc37.noarch.rpm                                       102 kB/s |  24 kB     00:00    
+(86/101): python3.10-3.10.8-3.fc37.x86_64.rpm                                             114 kB/s |  27 kB     00:00    
+(87/101): pypy3.9-libs-7.3.9-4.3.9.fc37.x86_64.rpm                                        9.5 MB/s |  17 MB     00:01    
+(88/101): python3.10-tkinter-3.10.8-3.fc37.x86_64.rpm                                     1.8 MB/s | 347 kB     00:00    
+(89/101): python3.12-3.12.0~a1-2.fc37.x86_64.rpm                                          136 kB/s |  23 kB     00:00    
+(90/101): python3.12-devel-3.12.0~a1-2.fc37.x86_64.rpm                                    1.7 MB/s | 278 kB     00:00    
+(91/101): python3.12-libs-3.12.0~a1-2.fc37.x86_64.rpm                                     9.5 MB/s | 9.6 MB     00:01    
+(92/101): python3.12-tkinter-3.12.0~a1-2.fc37.x86_64.rpm                                  1.7 MB/s | 410 kB     00:00    
+(93/101): python3.10-libs-3.10.8-3.fc37.x86_64.rpm                                        2.4 MB/s | 7.8 MB     00:03    
+(94/101): python3.6-3.6.15-14.fc37.x86_64.rpm                                             9.3 MB/s |  19 MB     00:02    
+(95/101): pypy3.8-libs-7.3.9-5.3.8.fc37.x86_64.rpm                                        1.9 MB/s |  14 MB     00:07    
+(96/101): python3.8-3.8.15-2.fc37.x86_64.rpm                                              9.0 MB/s |  17 MB     00:01    
+(97/101): qt5-srpm-macros-5.15.7-1.fc37.noarch.rpm                                         49 kB/s | 7.9 kB     00:00    
+(98/101): rust-srpm-macros-23-1.fc37.noarch.rpm                                            62 kB/s | 9.4 kB     00:00    
+(99/101): valgrind-3.20.0-1.fc37.x86_64.rpm                                               7.7 MB/s | 4.9 MB     00:00    
+(100/101): python3.7-3.7.15-2.fc37.x86_64.rpm                                             3.7 MB/s |  18 MB     00:04    
+(101/101): python3.9-3.9.15-2.fc37.x86_64.rpm                                             4.3 MB/s |  19 MB     00:04    
+--------------------------------------------------------------------------------------------------------------------------
+Total                                                                                     9.4 MB/s | 249 MB     00:26     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                  1/1 
+  Running scriptlet: tk-1:8.6.12-3.fc37.x86_64                                                                      1/101 
+  Installing       : tk-1:8.6.12-3.fc37.x86_64                                                                      1/101 
+  Installing       : clang-resource-filesystem-15.0.4-1.fc37.x86_64                                                 2/101 
+  Installing       : perl-Math-Complex-1.59-492.fc37.noarch                                                         3/101 
+  Installing       : perl-File-Copy-2.39-492.fc37.noarch                                                            4/101 
+  Installing       : openssl1.1-1:1.1.1q-2.fc37.x86_64                                                              5/101 
+  Installing       : m4-1.4.19-4.fc37.x86_64                                                                        6/101 
+  Installing       : perl-Math-BigRat-0.2624-2.fc37.noarch                                                          7/101 
+  Installing       : perl-Math-BigInt-1:1.9998.37-2.fc37.noarch                                                     8/101 
+  Installing       : pypy3.9-libs-7.3.9-4.3.9.fc37.x86_64                                                           9/101 
+  Installing       : libomp-15.0.4-1.fc37.x86_64                                                                   10/101 
+  Installing       : python3-filelock-3.7.1-1.fc37.noarch                                                          11/101 
+  Installing       : libstdc++-devel-12.2.1-2.fc37.x86_64                                                          12/101 
+  Installing       : gcc-c++-12.2.1-2.fc37.x86_64                                                                  13/101 
+  Installing       : libomp-devel-15.0.4-1.fc37.x86_64                                                             14/101 
+  Installing       : pypy3.9-7.3.9-4.3.9.fc37.x86_64                                                               15/101 
+  Installing       : pypy3.9-devel-7.3.9-4.3.9.fc37.x86_64                                                         16/101 
+  Installing       : perl-JSON-4.09-1.fc37.noarch                                                                  17/101 
+  Installing       : python3.6-3.6.15-14.fc37.x86_64                                                               18/101 
+  Installing       : python3.7-3.7.15-2.fc37.x86_64                                                                19/101 
+  Installing       : perl-GD-2.76-3.fc37.x86_64                                                                    20/101 
+  Installing       : compiler-rt-15.0.4-1.fc37.x86_64                                                              21/101 
+  Installing       : clang-libs-15.0.4-1.fc37.x86_64                                                               22/101 
+  Installing       : clang-15.0.4-1.fc37.x86_64                                                                    23/101 
+  Installing       : pypy-libs-7.3.9-4.fc37.x86_64                                                                 24/101 
+  Installing       : pypy-7.3.9-4.fc37.x86_64                                                                      25/101 
+  Installing       : pypy-devel-7.3.9-4.fc37.x86_64                                                                26/101 
+  Installing       : tix-1:8.4.3-34.fc37.x86_64                                                                    27/101 
+  Running scriptlet: tix-1:8.4.3-34.fc37.x86_64                                                                    27/101 
+  Installing       : pypy3.8-7.3.9-5.3.8.fc37.x86_64                                                               28/101 
+  Installing       : pypy3.8-libs-7.3.9-5.3.8.fc37.x86_64                                                          29/101 
+  Installing       : pypy3.8-devel-7.3.9-5.3.8.fc37.x86_64                                                         30/101 
+  Installing       : python3.10-3.10.8-3.fc37.x86_64                                                               31/101 
+  Installing       : python3.10-tkinter-3.10.8-3.fc37.x86_64                                                       32/101 
+  Installing       : python3.10-libs-3.10.8-3.fc37.x86_64                                                          33/101 
+  Installing       : python3.12-3.12.0~a1-2.fc37.x86_64                                                            34/101 
+  Installing       : python3.12-tkinter-3.12.0~a1-2.fc37.x86_64                                                    35/101 
+  Installing       : python3.12-libs-3.12.0~a1-2.fc37.x86_64                                                       36/101 
+  Installing       : python3.12-devel-3.12.0~a1-2.fc37.x86_64                                                      37/101 
+  Installing       : python3.8-3.8.15-2.fc37.x86_64                                                                38/101 
+  Installing       : python3.9-3.9.15-2.fc37.x86_64                                                                39/101 
+  Installing       : rust-srpm-macros-23-1.fc37.noarch                                                             40/101 
+  Installing       : qt5-srpm-macros-5.15.7-1.fc37.noarch                                                          41/101 
+  Installing       : ansible-srpm-macros-1-8.1.fc37.noarch                                                         42/101 
+  Installing       : annobin-docs-10.92-1.fc37.noarch                                                              43/101 
+  Installing       : annobin-plugin-gcc-10.92-1.fc37.x86_64                                                        44/101 
+  Installing       : slang-2.3.3-1.fc37.x86_64                                                                     45/101 
+  Installing       : rpmautospec-rpm-macros-0.3.0-1.fc37.noarch                                                    46/101 
+  Installing       : python3-py-1.11.0-5.fc37.noarch                                                               47/101 
+  Installing       : python3-pluggy-1.0.0-5.fc37.noarch                                                            48/101 
+  Installing       : python3-platformdirs-2.5.2-3.fc37.noarch                                                      49/101 
+  Installing       : python3-pip-22.2.2-2.fc37.noarch                                                              50/101 
+  Installing       : python3-devel-3.11.0-1.fc37.x86_64                                                            51/101 
+  Installing       : python3-distlib-0.3.4-5.fc37.noarch                                                           52/101 
+  Installing       : python-wheel-wheel-1:0.37.1-4.fc37.noarch                                                     53/101 
+  Installing       : python3-virtualenv-20.15.1-2.fc37.noarch                                                      54/101 
+  Installing       : perl-srpm-macros-1-46.fc37.noarch                                                             55/101 
+  Installing       : perl-Thread-Queue-3.14-489.fc37.noarch                                                        56/101 
+  Installing       : perl-Sys-Hostname-1.24-492.fc37.x86_64                                                        57/101 
+  Installing       : perl-PerlIO-gzip-0.20-19.fc37.x86_64                                                          58/101 
+  Installing       : perl-Hash-Util-FieldHash-1.26-492.fc37.x86_64                                                 59/101 
+  Installing       : perl-Hash-Util-0.28-492.fc37.x86_64                                                           60/101 
+  Installing       : perl-FindBin-1.53-492.fc37.noarch                                                             61/101 
+  Installing       : perl-File-Compare-1.100.700-492.fc37.noarch                                                   62/101 
+  Installing       : autoconf-2.71-4.fc37.noarch                                                                   63/101 
+  Installing       : automake-1.16.5-9.fc37.noarch                                                                 64/101 
+  Installing       : package-notes-srpm-macros-0.5-6.fc37.noarch                                                   65/101 
+  Installing       : openblas-srpm-macros-2-12.fc37.noarch                                                         66/101 
+  Installing       : ocaml-srpm-macros-7-2.fc37.noarch                                                             67/101 
+  Installing       : nim-srpm-macros-3-7.fc37.noarch                                                               68/101 
+  Installing       : lua-srpm-macros-1-7.fc37.noarch                                                               69/101 
+  Installing       : llvm-15.0.0-1.fc37.x86_64                                                                     70/101 
+  Installing       : libtraceevent-1.5.3-3.fc37.x86_64                                                             71/101 
+  Installing       : kernel-srpm-macros-1.0-15.fc37.noarch                                                         72/101 
+  Installing       : hiredis-1.0.2-3.fc37.x86_64                                                                   73/101 
+  Installing       : gnat-srpm-macros-4-16.fc37.noarch                                                             74/101 
+  Installing       : ghc-srpm-macros-1.5.0-7.fc37.noarch                                                           75/101 
+  Installing       : gcc-plugin-annobin-12.2.1-2.fc37.x86_64                                                       76/101 
+  Installing       : fpc-srpm-macros-1.3-6.fc37.noarch                                                             77/101 
+  Installing       : efi-srpm-macros-5-6.fc37.noarch                                                               78/101 
+  Installing       : ed-1.18-2.fc37.x86_64                                                                         79/101 
+  Installing       : dwz-0.14-7.fc37.x86_64                                                                        80/101 
+  Installing       : fonts-srpm-macros-1:2.0.5-9.fc37.noarch                                                       81/101 
+  Installing       : go-srpm-macros-3.2.0-1.fc37.noarch                                                            82/101 
+  Installing       : python-srpm-macros-3.11-5.fc37.noarch                                                         83/101 
+  Installing       : redhat-rpm-config-228-1.fc37.noarch                                                           84/101 
+  Running scriptlet: redhat-rpm-config-228-1.fc37.noarch                                                           84/101 
+  Installing       : python2.7-2.7.18-25.fc37.x86_64                                                               85/101 
+  Installing       : cyrus-sasl-devel-2.1.28-8.fc37.x86_64                                                         86/101 
+  Installing       : openldap-devel-2.6.3-1.fc37.x86_64                                                            87/101 
+  Installing       : tox-3.26.0-1.fc37.noarch                                                                      88/101 
+  Installing       : cscope-15.9-17.fc37.x86_64                                                                    89/101 
+  Running scriptlet: ccache-4.6.1-2.fc37.x86_64                                                                    90/101 
+  Installing       : ccache-4.6.1-2.fc37.x86_64                                                                    90/101 
+  Running scriptlet: ccache-4.6.1-2.fc37.x86_64                                                                    90/101 
+  Installing       : perf-6.0.5-300.fc37.x86_64                                                                    91/101 
+  Installing       : libtool-2.4.7-2.fc37.x86_64                                                                   92/101 
+  Installing       : clang-analyzer-15.0.4-1.fc37.noarch                                                           93/101 
+  Installing       : lcov-1.14-8.fc37.noarch                                                                       94/101 
+  Installing       : bison-3.8.2-3.fc37.x86_64                                                                     95/101 
+  Installing       : flex-2.6.4-11.fc37.x86_64                                                                     96/101 
+  Installing       : valgrind-1:3.20.0-1.fc37.x86_64                                                               97/101 
+  Installing       : strace-5.16-1.fc36.x86_64                                                                     98/101 
+  Installing       : ltrace-0.7.91-46.fc37.x86_64                                                                  99/101 
+  Installing       : indent-2.2.12-10.fc37.x86_64                                                                 100/101 
+  Installing       : byacc-2.0.20220128-2.fc37.x86_64                                                             101/101 
+  Running scriptlet: byacc-2.0.20220128-2.fc37.x86_64                                                             101/101 
+  Verifying        : automake-1.16.5-9.fc37.noarch                                                                  1/101 
+  Verifying        : bison-3.8.2-3.fc37.x86_64                                                                      2/101 
+  Verifying        : byacc-2.0.20220128-2.fc37.x86_64                                                               3/101 
+  Verifying        : ccache-4.6.1-2.fc37.x86_64                                                                     4/101 
+  Verifying        : cyrus-sasl-devel-2.1.28-8.fc37.x86_64                                                          5/101 
+  Verifying        : dwz-0.14-7.fc37.x86_64                                                                         6/101 
+  Verifying        : ed-1.18-2.fc37.x86_64                                                                          7/101 
+  Verifying        : efi-srpm-macros-5-6.fc37.noarch                                                                8/101 
+  Verifying        : flex-2.6.4-11.fc37.x86_64                                                                      9/101 
+  Verifying        : fonts-srpm-macros-1:2.0.5-9.fc37.noarch                                                       10/101 
+  Verifying        : fpc-srpm-macros-1.3-6.fc37.noarch                                                             11/101 
+  Verifying        : gcc-c++-12.2.1-2.fc37.x86_64                                                                  12/101 
+  Verifying        : gcc-plugin-annobin-12.2.1-2.fc37.x86_64                                                       13/101 
+  Verifying        : ghc-srpm-macros-1.5.0-7.fc37.noarch                                                           14/101 
+  Verifying        : gnat-srpm-macros-4-16.fc37.noarch                                                             15/101 
+  Verifying        : go-srpm-macros-3.2.0-1.fc37.noarch                                                            16/101 
+  Verifying        : hiredis-1.0.2-3.fc37.x86_64                                                                   17/101 
+  Verifying        : indent-2.2.12-10.fc37.x86_64                                                                  18/101 
+  Verifying        : kernel-srpm-macros-1.0-15.fc37.noarch                                                         19/101 
+  Verifying        : lcov-1.14-8.fc37.noarch                                                                       20/101 
+  Verifying        : libstdc++-devel-12.2.1-2.fc37.x86_64                                                          21/101 
+  Verifying        : libtool-2.4.7-2.fc37.x86_64                                                                   22/101 
+  Verifying        : libtraceevent-1.5.3-3.fc37.x86_64                                                             23/101 
+  Verifying        : llvm-15.0.0-1.fc37.x86_64                                                                     24/101 
+  Verifying        : ltrace-0.7.91-46.fc37.x86_64                                                                  25/101 
+  Verifying        : lua-srpm-macros-1-7.fc37.noarch                                                               26/101 
+  Verifying        : m4-1.4.19-4.fc37.x86_64                                                                       27/101 
+  Verifying        : nim-srpm-macros-3-7.fc37.noarch                                                               28/101 
+  Verifying        : ocaml-srpm-macros-7-2.fc37.noarch                                                             29/101 
+  Verifying        : openblas-srpm-macros-2-12.fc37.noarch                                                         30/101 
+  Verifying        : openldap-devel-2.6.3-1.fc37.x86_64                                                            31/101 
+  Verifying        : openssl1.1-1:1.1.1q-2.fc37.x86_64                                                             32/101 
+  Verifying        : package-notes-srpm-macros-0.5-6.fc37.noarch                                                   33/101 
+  Verifying        : perf-6.0.5-300.fc37.x86_64                                                                    34/101 
+  Verifying        : perl-File-Compare-1.100.700-492.fc37.noarch                                                   35/101 
+  Verifying        : perl-File-Copy-2.39-492.fc37.noarch                                                           36/101 
+  Verifying        : perl-FindBin-1.53-492.fc37.noarch                                                             37/101 
+  Verifying        : perl-GD-2.76-3.fc37.x86_64                                                                    38/101 
+  Verifying        : perl-Hash-Util-0.28-492.fc37.x86_64                                                           39/101 
+  Verifying        : perl-Hash-Util-FieldHash-1.26-492.fc37.x86_64                                                 40/101 
+  Verifying        : perl-JSON-4.09-1.fc37.noarch                                                                  41/101 
+  Verifying        : perl-Math-BigInt-1:1.9998.37-2.fc37.noarch                                                    42/101 
+  Verifying        : perl-Math-BigRat-0.2624-2.fc37.noarch                                                         43/101 
+  Verifying        : perl-Math-Complex-1.59-492.fc37.noarch                                                        44/101 
+  Verifying        : perl-PerlIO-gzip-0.20-19.fc37.x86_64                                                          45/101 
+  Verifying        : perl-Sys-Hostname-1.24-492.fc37.x86_64                                                        46/101 
+  Verifying        : perl-Thread-Queue-3.14-489.fc37.noarch                                                        47/101 
+  Verifying        : perl-srpm-macros-1-46.fc37.noarch                                                             48/101 
+  Verifying        : pypy-7.3.9-4.fc37.x86_64                                                                      49/101 
+  Verifying        : pypy-devel-7.3.9-4.fc37.x86_64                                                                50/101 
+  Verifying        : pypy-libs-7.3.9-4.fc37.x86_64                                                                 51/101 
+  Verifying        : python-wheel-wheel-1:0.37.1-4.fc37.noarch                                                     52/101 
+  Verifying        : python2.7-2.7.18-25.fc37.x86_64                                                               53/101 
+  Verifying        : python3-devel-3.11.0-1.fc37.x86_64                                                            54/101 
+  Verifying        : python3-distlib-0.3.4-5.fc37.noarch                                                           55/101 
+  Verifying        : python3-filelock-3.7.1-1.fc37.noarch                                                          56/101 
+  Verifying        : python3-pip-22.2.2-2.fc37.noarch                                                              57/101 
+  Verifying        : python3-platformdirs-2.5.2-3.fc37.noarch                                                      58/101 
+  Verifying        : python3-pluggy-1.0.0-5.fc37.noarch                                                            59/101 
+  Verifying        : python3-py-1.11.0-5.fc37.noarch                                                               60/101 
+  Verifying        : python3-virtualenv-20.15.1-2.fc37.noarch                                                      61/101 
+  Verifying        : redhat-rpm-config-228-1.fc37.noarch                                                           62/101 
+  Verifying        : rpmautospec-rpm-macros-0.3.0-1.fc37.noarch                                                    63/101 
+  Verifying        : slang-2.3.3-1.fc37.x86_64                                                                     64/101 
+  Verifying        : strace-5.16-1.fc36.x86_64                                                                     65/101 
+  Verifying        : tix-1:8.4.3-34.fc37.x86_64                                                                    66/101 
+  Verifying        : tk-1:8.6.12-3.fc37.x86_64                                                                     67/101 
+  Verifying        : tox-3.26.0-1.fc37.noarch                                                                      68/101 
+  Verifying        : annobin-docs-10.92-1.fc37.noarch                                                              69/101 
+  Verifying        : annobin-plugin-gcc-10.92-1.fc37.x86_64                                                        70/101 
+  Verifying        : ansible-srpm-macros-1-8.1.fc37.noarch                                                         71/101 
+  Verifying        : autoconf-2.71-4.fc37.noarch                                                                   72/101 
+  Verifying        : clang-15.0.4-1.fc37.x86_64                                                                    73/101 
+  Verifying        : clang-analyzer-15.0.4-1.fc37.noarch                                                           74/101 
+  Verifying        : clang-libs-15.0.4-1.fc37.x86_64                                                               75/101 
+  Verifying        : clang-resource-filesystem-15.0.4-1.fc37.x86_64                                                76/101 
+  Verifying        : compiler-rt-15.0.4-1.fc37.x86_64                                                              77/101 
+  Verifying        : cscope-15.9-17.fc37.x86_64                                                                    78/101 
+  Verifying        : libomp-15.0.4-1.fc37.x86_64                                                                   79/101 
+  Verifying        : libomp-devel-15.0.4-1.fc37.x86_64                                                             80/101 
+  Verifying        : pypy3.8-7.3.9-5.3.8.fc37.x86_64                                                               81/101 
+  Verifying        : pypy3.8-devel-7.3.9-5.3.8.fc37.x86_64                                                         82/101 
+  Verifying        : pypy3.8-libs-7.3.9-5.3.8.fc37.x86_64                                                          83/101 
+  Verifying        : pypy3.9-7.3.9-4.3.9.fc37.x86_64                                                               84/101 
+  Verifying        : pypy3.9-devel-7.3.9-4.3.9.fc37.x86_64                                                         85/101 
+  Verifying        : pypy3.9-libs-7.3.9-4.3.9.fc37.x86_64                                                          86/101 
+  Verifying        : python-srpm-macros-3.11-5.fc37.noarch                                                         87/101 
+  Verifying        : python3.10-3.10.8-3.fc37.x86_64                                                               88/101 
+  Verifying        : python3.10-libs-3.10.8-3.fc37.x86_64                                                          89/101 
+  Verifying        : python3.10-tkinter-3.10.8-3.fc37.x86_64                                                       90/101 
+  Verifying        : python3.12-3.12.0~a1-2.fc37.x86_64                                                            91/101 
+  Verifying        : python3.12-devel-3.12.0~a1-2.fc37.x86_64                                                      92/101 
+  Verifying        : python3.12-libs-3.12.0~a1-2.fc37.x86_64                                                       93/101 
+  Verifying        : python3.12-tkinter-3.12.0~a1-2.fc37.x86_64                                                    94/101 
+  Verifying        : python3.6-3.6.15-14.fc37.x86_64                                                               95/101 
+  Verifying        : python3.7-3.7.15-2.fc37.x86_64                                                                96/101 
+  Verifying        : python3.8-3.8.15-2.fc37.x86_64                                                                97/101 
+  Verifying        : python3.9-3.9.15-2.fc37.x86_64                                                                98/101 
+  Verifying        : qt5-srpm-macros-5.15.7-1.fc37.noarch                                                          99/101 
+  Verifying        : rust-srpm-macros-23-1.fc37.noarch                                                            100/101 
+  Verifying        : valgrind-1:3.20.0-1.fc37.x86_64                                                              101/101 
+
+Installed:
+  annobin-docs-10.92-1.fc37.noarch                           annobin-plugin-gcc-10.92-1.fc37.x86_64                       
+  ansible-srpm-macros-1-8.1.fc37.noarch                      autoconf-2.71-4.fc37.noarch                                  
+  automake-1.16.5-9.fc37.noarch                              bison-3.8.2-3.fc37.x86_64                                    
+  byacc-2.0.20220128-2.fc37.x86_64                           ccache-4.6.1-2.fc37.x86_64                                   
+  clang-15.0.4-1.fc37.x86_64                                 clang-analyzer-15.0.4-1.fc37.noarch                          
+  clang-libs-15.0.4-1.fc37.x86_64                            clang-resource-filesystem-15.0.4-1.fc37.x86_64               
+  compiler-rt-15.0.4-1.fc37.x86_64                           cscope-15.9-17.fc37.x86_64                                   
+  cyrus-sasl-devel-2.1.28-8.fc37.x86_64                      dwz-0.14-7.fc37.x86_64                                       
+  ed-1.18-2.fc37.x86_64                                      efi-srpm-macros-5-6.fc37.noarch                              
+  flex-2.6.4-11.fc37.x86_64                                  fonts-srpm-macros-1:2.0.5-9.fc37.noarch                      
+  fpc-srpm-macros-1.3-6.fc37.noarch                          gcc-c++-12.2.1-2.fc37.x86_64                                 
+  gcc-plugin-annobin-12.2.1-2.fc37.x86_64                    ghc-srpm-macros-1.5.0-7.fc37.noarch                          
+  gnat-srpm-macros-4-16.fc37.noarch                          go-srpm-macros-3.2.0-1.fc37.noarch                           
+  hiredis-1.0.2-3.fc37.x86_64                                indent-2.2.12-10.fc37.x86_64                                 
+  kernel-srpm-macros-1.0-15.fc37.noarch                      lcov-1.14-8.fc37.noarch                                      
+  libomp-15.0.4-1.fc37.x86_64                                libomp-devel-15.0.4-1.fc37.x86_64                            
+  libstdc++-devel-12.2.1-2.fc37.x86_64                       libtool-2.4.7-2.fc37.x86_64                                  
+  libtraceevent-1.5.3-3.fc37.x86_64                          llvm-15.0.0-1.fc37.x86_64                                    
+  ltrace-0.7.91-46.fc37.x86_64                               lua-srpm-macros-1-7.fc37.noarch                              
+  m4-1.4.19-4.fc37.x86_64                                    nim-srpm-macros-3-7.fc37.noarch                              
+  ocaml-srpm-macros-7-2.fc37.noarch                          openblas-srpm-macros-2-12.fc37.noarch                        
+  openldap-devel-2.6.3-1.fc37.x86_64                         openssl1.1-1:1.1.1q-2.fc37.x86_64                            
+  package-notes-srpm-macros-0.5-6.fc37.noarch                perf-6.0.5-300.fc37.x86_64                                   
+  perl-File-Compare-1.100.700-492.fc37.noarch                perl-File-Copy-2.39-492.fc37.noarch                          
+  perl-FindBin-1.53-492.fc37.noarch                          perl-GD-2.76-3.fc37.x86_64                                   
+  perl-Hash-Util-0.28-492.fc37.x86_64                        perl-Hash-Util-FieldHash-1.26-492.fc37.x86_64                
+  perl-JSON-4.09-1.fc37.noarch                               perl-Math-BigInt-1:1.9998.37-2.fc37.noarch                   
+  perl-Math-BigRat-0.2624-2.fc37.noarch                      perl-Math-Complex-1.59-492.fc37.noarch                       
+  perl-PerlIO-gzip-0.20-19.fc37.x86_64                       perl-Sys-Hostname-1.24-492.fc37.x86_64                       
+  perl-Thread-Queue-3.14-489.fc37.noarch                     perl-srpm-macros-1-46.fc37.noarch                            
+  pypy-7.3.9-4.fc37.x86_64                                   pypy-devel-7.3.9-4.fc37.x86_64                               
+  pypy-libs-7.3.9-4.fc37.x86_64                              pypy3.8-7.3.9-5.3.8.fc37.x86_64                              
+  pypy3.8-devel-7.3.9-5.3.8.fc37.x86_64                      pypy3.8-libs-7.3.9-5.3.8.fc37.x86_64                         
+  pypy3.9-7.3.9-4.3.9.fc37.x86_64                            pypy3.9-devel-7.3.9-4.3.9.fc37.x86_64                        
+  pypy3.9-libs-7.3.9-4.3.9.fc37.x86_64                       python-srpm-macros-3.11-5.fc37.noarch                        
+  python-wheel-wheel-1:0.37.1-4.fc37.noarch                  python2.7-2.7.18-25.fc37.x86_64                              
+  python3-devel-3.11.0-1.fc37.x86_64                         python3-distlib-0.3.4-5.fc37.noarch                          
+  python3-filelock-3.7.1-1.fc37.noarch                       python3-pip-22.2.2-2.fc37.noarch                             
+  python3-platformdirs-2.5.2-3.fc37.noarch                   python3-pluggy-1.0.0-5.fc37.noarch                           
+  python3-py-1.11.0-5.fc37.noarch                            python3-virtualenv-20.15.1-2.fc37.noarch                     
+  python3.10-3.10.8-3.fc37.x86_64                            python3.10-libs-3.10.8-3.fc37.x86_64                         
+  python3.10-tkinter-3.10.8-3.fc37.x86_64                    python3.12-3.12.0~a1-2.fc37.x86_64                           
+  python3.12-devel-3.12.0~a1-2.fc37.x86_64                   python3.12-libs-3.12.0~a1-2.fc37.x86_64                      
+  python3.12-tkinter-3.12.0~a1-2.fc37.x86_64                 python3.6-3.6.15-14.fc37.x86_64                              
+  python3.7-3.7.15-2.fc37.x86_64                             python3.8-3.8.15-2.fc37.x86_64                               
+  python3.9-3.9.15-2.fc37.x86_64                             qt5-srpm-macros-5.15.7-1.fc37.noarch                         
+  redhat-rpm-config-228-1.fc37.noarch                        rpmautospec-rpm-macros-0.3.0-1.fc37.noarch                   
+  rust-srpm-macros-23-1.fc37.noarch                          slang-2.3.3-1.fc37.x86_64                                    
+  strace-5.16-1.fc36.x86_64                                  tix-1:8.4.3-34.fc37.x86_64                                   
+  tk-1:8.6.12-3.fc37.x86_64                                  tox-3.26.0-1.fc37.noarch                                     
+  valgrind-1:3.20.0-1.fc37.x86_64                           
+Complete!
+
+(base) [athul@pki ~]$ conda activate mydevenv
+(mydevenv) [athul@pki ~]$ pip install python-ldap
+Collecting python-ldap
+  Using cached python-ldap-3.4.3.tar.gz (377 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pyasn1>=0.3.7
+  Using cached pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+Collecting pyasn1-modules>=0.1.5
+  Using cached pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Building wheels for collected packages: python-ldap
+  Building wheel for python-ldap (pyproject.toml) ... done
+  Created wheel for python-ldap: filename=python_ldap-3.4.3-cp38-cp38-linux_x86_64.whl size=321743 sha256=eb761fbb5249430c47decb4c3e16b219456443d15bbdb68d9231d996c7152660
+  Stored in directory: /home/athul/.cache/pip/wheels/45/3d/a5/9752d64a34d2c8492c9cc7155fa85350113e2e8b92f6bbc847
+Successfully built python-ldap
+Installing collected packages: pyasn1, pyasn1-modules, python-ldap
+Successfully installed pyasn1-0.4.8 pyasn1-modules-0.2.8 python-ldap-3.4.3
+(mydevenv) [athul@pki ~]$ pip install dogtag-pki
+Collecting dogtag-pki
+  Using cached dogtag_pki-11.2.1-py2.py3-none-any.whl (94 kB)
+Collecting cryptography
+  Downloading cryptography-38.0.3-cp36-abi3-manylinux_2_28_x86_64.whl (4.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 9.2 MB/s eta 0:00:00
+Collecting requests
+  Downloading requests-2.28.1-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 6.2 MB/s eta 0:00:00
+Collecting six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting cffi>=1.12
+  Downloading cffi-1.15.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 442.7/442.7 kB 5.5 MB/s eta 0:00:00
+Collecting charset-normalizer<3,>=2
+  Downloading charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
+Requirement already satisfied: certifi>=2017.4.17 in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from requests->dogtag-pki) (2022.9.24)
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.4/140.4 kB 13.1 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.4-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 kB 3.5 MB/s eta 0:00:00
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 kB 2.7 MB/s eta 0:00:00
+Installing collected packages: urllib3, six, pycparser, idna, charset-normalizer, requests, cffi, cryptography, dogtag-pki
+Successfully installed cffi-1.15.1 charset-normalizer-2.1.1 cryptography-38.0.3 dogtag-pki-11.2.1 idna-3.4 pycparser-2.21 requests-2.28.1 six-1.16.0 urllib3-1.26.12
+(mydevenv) [athul@pki ~]$ pip install jupyterlab
+Collecting jupyterlab
+  Downloading jupyterlab-3.5.0-py3-none-any.whl (8.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 9.3 MB/s eta 0:00:00
+Collecting notebook<7
+  Downloading notebook-6.5.2-py3-none-any.whl (439 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 439.1/439.1 kB 2.8 MB/s eta 0:00:00
+Collecting packaging
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 2.9 MB/s eta 0:00:00
+Collecting nbclassic
+  Downloading nbclassic-0.4.8-py3-none-any.whl (9.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.8/9.8 MB 8.8 MB/s eta 0:00:00
+Collecting tomli
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting jupyterlab-server~=2.10
+  Downloading jupyterlab_server-2.16.3-py3-none-any.whl (54 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.1/54.1 kB 740.2 kB/s eta 0:00:00
+Collecting tornado>=6.1.0
+  Downloading tornado-6.2-cp37-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (423 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 424.0/424.0 kB 14.2 MB/s eta 0:00:00
+Collecting jupyter-server<3,>=1.16.0
+  Downloading jupyter_server-1.23.3-py3-none-any.whl (346 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.4/346.4 kB 24.4 MB/s eta 0:00:00
+Collecting ipython
+  Downloading ipython-8.6.0-py3-none-any.whl (761 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 761.1/761.1 kB 9.2 MB/s eta 0:00:00
+Collecting jinja2>=2.1
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 2.4 MB/s eta 0:00:00
+Collecting jupyter-core
+  Downloading jupyter_core-5.0.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 3.6 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Collecting Send2Trash
+  Downloading Send2Trash-1.8.0-py3-none-any.whl (18 kB)
+Collecting terminado>=0.8.3
+  Downloading terminado-0.17.0-py3-none-any.whl (16 kB)
+Collecting traitlets>=5.1
+  Downloading traitlets-5.5.0-py3-none-any.whl (107 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 12.5 MB/s eta 0:00:00
+Collecting pyzmq>=17
+  Downloading pyzmq-24.0.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 5.8 MB/s eta 0:00:00
+Collecting nbformat>=5.2.0
+  Downloading nbformat-5.7.0-py3-none-any.whl (77 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 2.5 MB/s eta 0:00:00
+Collecting jupyter-client>=6.1.12
+  Downloading jupyter_client-7.4.7-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.5/133.5 kB 11.4 MB/s eta 0:00:00
+Collecting websocket-client
+  Downloading websocket_client-1.4.2-py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.3/55.3 kB 1.1 MB/s eta 0:00:00
+Collecting prometheus-client
+  Downloading prometheus_client-0.15.0-py3-none-any.whl (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.1/60.1 kB 1.4 MB/s eta 0:00:00
+Collecting argon2-cffi
+  Downloading argon2_cffi-21.3.0-py3-none-any.whl (14 kB)
+Collecting anyio<4,>=3.1.0
+  Downloading anyio-3.6.2-py3-none-any.whl (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.6/80.6 kB 6.6 MB/s eta 0:00:00
+Collecting nbconvert>=6.4.4
+  Downloading nbconvert-7.2.5-py3-none-any.whl (273 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 273.3/273.3 kB 28.7 MB/s eta 0:00:00
+Collecting platformdirs
+  Downloading platformdirs-2.5.4-py3-none-any.whl (14 kB)
+Collecting importlib-metadata>=4.8.3
+  Downloading importlib_metadata-5.0.0-py3-none-any.whl (21 kB)
+Collecting babel
+  Downloading Babel-2.11.0-py3-none-any.whl (9.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 8.9 MB/s eta 0:00:00
+Requirement already satisfied: requests in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from jupyterlab-server~=2.10->jupyterlab) (2.28.1)
+Collecting jsonschema>=3.0.1
+  Downloading jsonschema-4.17.1-py3-none-any.whl (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.2/90.2 kB 6.2 MB/s eta 0:00:00
+Collecting json5
+  Downloading json5-0.9.10-py2.py3-none-any.whl (19 kB)
+Collecting ipython-genutils
+  Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+Collecting nest-asyncio>=1.5
+  Downloading nest_asyncio-1.5.6-py3-none-any.whl (5.2 kB)
+Collecting ipykernel
+  Downloading ipykernel-6.17.1-py3-none-any.whl (138 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 138.6/138.6 kB 13.3 MB/s eta 0:00:00
+Collecting notebook-shim>=0.1.0
+  Downloading notebook_shim-0.2.2-py3-none-any.whl (13 kB)
+Collecting backcall
+  Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Collecting decorator
+  Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting stack-data
+  Downloading stack_data-0.6.1-py3-none-any.whl (24 kB)
+Collecting matplotlib-inline
+  Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting prompt-toolkit<3.1.0,>3.0.1
+  Downloading prompt_toolkit-3.0.33-py3-none-any.whl (383 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 383.6/383.6 kB 4.4 MB/s eta 0:00:00
+Collecting pygments>=2.4.0
+  Downloading Pygments-2.13.0-py3-none-any.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 6.2 MB/s eta 0:00:00
+Collecting pickleshare
+  Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Collecting pexpect>4.3
+  Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.0/59.0 kB 653.9 kB/s eta 0:00:00
+Collecting jedi>=0.16
+  Downloading jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 3.9 MB/s eta 0:00:00
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 1.1 MB/s eta 0:00:00
+Requirement already satisfied: idna>=2.8 in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from anyio<4,>=3.1.0->jupyter-server<3,>=1.16.0->jupyterlab) (3.4)
+Collecting sniffio>=1.1
+  Downloading sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting zipp>=0.5
+  Downloading zipp-3.10.0-py3-none-any.whl (6.2 kB)
+Collecting parso<0.9.0,>=0.8.0
+  Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 688.6 kB/s eta 0:00:00
+Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0
+  Downloading pyrsistent-0.19.2-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.5/57.5 kB 421.9 kB/s eta 0:00:00
+Collecting pkgutil-resolve-name>=1.3.10
+  Downloading pkgutil_resolve_name-1.3.10-py3-none-any.whl (4.7 kB)
+Collecting importlib-resources>=1.4.0
+  Downloading importlib_resources-5.10.0-py3-none-any.whl (34 kB)
+Collecting attrs>=17.4.0
+  Downloading attrs-22.1.0-py2.py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.8/58.8 kB 5.2 MB/s eta 0:00:00
+Collecting entrypoints
+  Downloading entrypoints-0.4-py3-none-any.whl (5.3 kB)
+Collecting python-dateutil>=2.8.2
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 12.3 MB/s eta 0:00:00
+Collecting nbclient>=0.5.0
+  Downloading nbclient-0.7.0-py3-none-any.whl (71 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.9/71.9 kB 1.6 MB/s eta 0:00:00
+Collecting bleach
+  Downloading bleach-5.0.1-py3-none-any.whl (160 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.9/160.9 kB 1.9 MB/s eta 0:00:00
+Collecting beautifulsoup4
+  Downloading beautifulsoup4-4.11.1-py3-none-any.whl (128 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.2/128.2 kB 11.7 MB/s eta 0:00:00
+Collecting defusedxml
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting jupyterlab-pygments
+  Downloading jupyterlab_pygments-0.2.2-py2.py3-none-any.whl (21 kB)
+Collecting tinycss2
+  Downloading tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Collecting pandocfilters>=1.4.1
+  Downloading pandocfilters-1.5.0-py2.py3-none-any.whl (8.7 kB)
+Collecting mistune<3,>=2.0.3
+  Downloading mistune-2.0.4-py2.py3-none-any.whl (24 kB)
+Collecting fastjsonschema
+  Downloading fastjsonschema-2.16.2-py3-none-any.whl (22 kB)
+Collecting ptyprocess>=0.5
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting wcwidth
+  Downloading wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+Collecting argon2-cffi-bindings
+  Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (86 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.2/86.2 kB 2.5 MB/s eta 0:00:00
+Collecting pytz>=2015.7
+  Downloading pytz-2022.6-py2.py3-none-any.whl (498 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 498.1/498.1 kB 8.5 MB/s eta 0:00:00
+Collecting psutil
+  Downloading psutil-5.9.4-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (280 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 280.2/280.2 kB 6.0 MB/s eta 0:00:00
+Collecting debugpy>=1.0
+  Downloading debugpy-1.6.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 8.9 MB/s eta 0:00:00
+Requirement already satisfied: certifi>=2017.4.17 in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from requests->jupyterlab-server~=2.10->jupyterlab) (2022.9.24)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from requests->jupyterlab-server~=2.10->jupyterlab) (1.26.12)
+Requirement already satisfied: charset-normalizer<3,>=2 in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from requests->jupyterlab-server~=2.10->jupyterlab) (2.1.1)
+Collecting asttokens>=2.1.0
+  Downloading asttokens-2.1.0-py2.py3-none-any.whl (26 kB)
+Collecting executing>=1.2.0
+  Downloading executing-1.2.0-py2.py3-none-any.whl (24 kB)
+Collecting pure-eval
+  Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Requirement already satisfied: six in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from asttokens>=2.1.0->stack-data->ipython->jupyterlab) (1.16.0)
+Requirement already satisfied: cffi>=1.0.1 in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from argon2-cffi-bindings->argon2-cffi->jupyter-server<3,>=1.16.0->jupyterlab) (1.15.1)
+Collecting soupsieve>1.2
+  Downloading soupsieve-2.3.2.post1-py3-none-any.whl (37 kB)
+Collecting webencodings
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: pycparser in ./.conda/envs/mydevenv/lib/python3.8/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi->jupyter-server<3,>=1.16.0->jupyterlab) (2.21)
+Installing collected packages: webencodings, wcwidth, Send2Trash, pytz, pure-eval, ptyprocess, pickleshare, mistune, json5, ipython-genutils, fastjsonschema, executing, backcall, zipp, websocket-client, traitlets, tornado, tomli, tinycss2, soupsieve, sniffio, pyzmq, python-dateutil, pyrsistent, pyparsing, pygments, psutil, prompt-toolkit, prometheus-client, platformdirs, pkgutil-resolve-name, pexpect, parso, pandocfilters, nest-asyncio, MarkupSafe, jupyterlab-pygments, entrypoints, defusedxml, decorator, debugpy, bleach, babel, attrs, asttokens, terminado, stack-data, packaging, matplotlib-inline, jupyter-core, jinja2, jedi, importlib-resources, importlib-metadata, beautifulsoup4, argon2-cffi-bindings, anyio, jupyter-client, jsonschema, ipython, argon2-cffi, nbformat, ipykernel, nbclient, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, nbclassic, notebook, jupyterlab
+Successfully installed MarkupSafe-2.1.1 Send2Trash-1.8.0 anyio-3.6.2 argon2-cffi-21.3.0 argon2-cffi-bindings-21.2.0 asttokens-2.1.0 attrs-22.1.0 babel-2.11.0 backcall-0.2.0 beautifulsoup4-4.11.1 bleach-5.0.1 debugpy-1.6.3 decorator-5.1.1 defusedxml-0.7.1 entrypoints-0.4 executing-1.2.0 fastjsonschema-2.16.2 importlib-metadata-5.0.0 importlib-resources-5.10.0 ipykernel-6.17.1 ipython-8.6.0 ipython-genutils-0.2.0 jedi-0.18.2 jinja2-3.1.2 json5-0.9.10 jsonschema-4.17.1 jupyter-client-7.4.7 jupyter-core-5.0.0 jupyter-server-1.23.3 jupyterlab-3.5.0 jupyterlab-pygments-0.2.2 jupyterlab-server-2.16.3 matplotlib-inline-0.1.6 mistune-2.0.4 nbclassic-0.4.8 nbclient-0.7.0 nbconvert-7.2.5 nbformat-5.7.0 nest-asyncio-1.5.6 notebook-6.5.2 notebook-shim-0.2.2 packaging-21.3 pandocfilters-1.5.0 parso-0.8.3 pexpect-4.8.0 pickleshare-0.7.5 pkgutil-resolve-name-1.3.10 platformdirs-2.5.4 prometheus-client-0.15.0 prompt-toolkit-3.0.33 psutil-5.9.4 ptyprocess-0.7.0 pure-eval-0.2.2 pygments-2.13.0 pyparsing-3.0.9 pyrsistent-0.19.2 python-dateutil-2.8.2 pytz-2022.6 pyzmq-24.0.1 sniffio-1.3.0 soupsieve-2.3.2.post1 stack-data-0.6.1 terminado-0.17.0 tinycss2-1.2.1 tomli-2.0.1 tornado-6.2 traitlets-5.5.0 wcwidth-0.2.5 webencodings-0.5.1 websocket-client-1.4.2 zipp-3.10.0
+(mydevenv) [athul@pki ~]$ 
+(mydevenv) [athul@pki ~]$ 
+(mydevenv) [athul@pki ~]$ openssl pkcs12 -nodes -in ca_admin_cert.p12 -out /temp/ca_admin_cert.pem
+pkcs12: Can't open "/temp/ca_admin_cert.pem" for writing, No such file or directory
+(mydevenv) [athul@pki ~]$ openssl pkcs12 -nodes -in ca_admin_cert.p12 -out /tmp/ca_admin_cert.pem
+Enter Import Password:
+(mydevenv) [athul@pki ~]$ ls -l /tmp/
+total 4
+-rw-------. 1 athul   athul   3669 Nov 23 11:10 ca_admin_cert.pem
+drwxr-xr-x. 2 athul   athul     40 Nov 23 10:51 hsperfdata_athul
+drwxr-xr-x. 2 pkiuser pkiuser   60 Nov 23 10:46 hsperfdata_pkiuser
+drwxr-xr-x. 2 root    root      40 Nov 23 10:50 hsperfdata_root
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-chronyd.service-1Miy6W
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-colord.service-wjuzaM
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-dbus-broker.service-WNtsny
+drwx------. 3 root    root      60 Nov 23 10:41 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-dirsrv@localhost.service-LVuPb1
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-fwupd.service-ZOiky9
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-geoclue.service-EWu5IK
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-low-memory-monitor.service-nYmZok
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-ModemManager.service-YOtQWy
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-power-profiles-daemon.service-bZLu6I
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-rtkit-daemon.service-7Pqxi4
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-switcheroo-control.service-L1mJE8
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-systemd-logind.service-po7PXB
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-systemd-oomd.service-x3cFcA
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-systemd-resolved.service-lA2S1q
+drwx------. 3 root    root      60 Nov 23 10:39 systemd-private-b34c1745d5764f72a199a06cdda0c8f2-upower.service-k0fPfl
+drwx------. 2 athul   athul     40 Nov 23 10:39 Temp-a0c8b138-8ba9-453e-b1d6-1fc96fe299b0
+(mydevenv) [athul@pki ~]$ jupter lab
+bash: jupter: command not found...
+(mydevenv) [athul@pki ~]$ jupyter lab
+[I 2022-11-23 11:12:20.622 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-11-23 11:12:20.633 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-11-23 11:12:20.636 ServerApp] Writing Jupyter server cookie secret to /home/athul/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2022-11-23 11:12:20.987 ServerApp] notebook_shim | extension was successfully linked.
+[I 2022-11-23 11:12:21.143 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2022-11-23 11:12:21.145 LabApp] JupyterLab extension loaded from /home/athul/.conda/envs/mydevenv/lib/python3.8/site-packages/jupyterlab
+[I 2022-11-23 11:12:21.145 LabApp] JupyterLab application directory is /home/athul/.conda/envs/mydevenv/share/jupyter/lab
+[I 2022-11-23 11:12:21.151 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2022-11-23 11:12:21.161 ServerApp] nbclassic | extension was successfully loaded.
+[I 2022-11-23 11:12:21.179 ServerApp] Serving notebooks from local directory: /home/athul
+[I 2022-11-23 11:12:21.179 ServerApp] Jupyter Server 1.23.3 is running at:
+[I 2022-11-23 11:12:21.179 ServerApp] http://localhost:8888/lab?token=9a531c712e65f3cf8b7f4e1db370c0c6cf1615d63ca30411
+[I 2022-11-23 11:12:21.179 ServerApp]  or http://127.0.0.1:8888/lab?token=9a531c712e65f3cf8b7f4e1db370c0c6cf1615d63ca30411
+[I 2022-11-23 11:12:21.180 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2022-11-23 11:12:21.349 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/athul/.local/share/jupyter/runtime/jpserver-7681-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=9a531c712e65f3cf8b7f4e1db370c0c6cf1615d63ca30411
+     or http://127.0.0.1:8888/lab?token=9a531c712e65f3cf8b7f4e1db370c0c6cf1615d63ca30411
+[W 2022-11-23 11:12:28.687 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2022-11-23 11:12:39.309 ServerApp] Writing notebook-signing key to /home/athul/.local/share/jupyter/notebook_secret
+[W 2022-11-23 11:12:39.319 ServerApp] Notebook dogtag-pki_ca_util.ipynb is not trusted
+[I 2022-11-23 11:12:42.008 ServerApp] Kernel started: 64268895-f5ea-424f-ad36-556077b2738d
+[W 2022-11-23 11:12:44.039 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f8cf8aabca0>
+[I 2022-11-23 11:14:40.927 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:16:40.995 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:19:06.000 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:22:48.598 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:24:48.688 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:26:28.784 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:28:28.892 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:30:28.958 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:32:02.117 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:32:41.279 ServerApp] Saving file at /dogtag-pki_ca_util.ipynb
+[I 2022-11-23 11:34:29.413 ServerApp] Starting buffering for 64268895-f5ea-424f-ad36-556077b2738d:5574a4b6-b892-4539-bbd9-61ae330f4b53
+^Z
+[1]+  Stopped                 jupyter lab
+
