@@ -186,8 +186,9 @@ pip install python-ldap
 $ openssl pkcs12 -nodes -in ca_admin_cert.p12 -out /tmp/ca_admin_cert.pem
 
 Refer to the python code for more details.
--------
-Notes:
-1) A seperate file has been added for the console output, in addition to the ones attached in readme.
 ------
+Notes
+------
+1) A seperate file has been added for the console output, in addition to the ones attached in readme.
+
 
