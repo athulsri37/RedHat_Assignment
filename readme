@@ -171,7 +171,7 @@ Approved certificate request 7
 Step 6: Python based approval
 ------------------------------
 Run this command to install ldap dependencies
-sudo dnf install "@C Development Tools and Libraries" openldap-devel \
+$ sudo dnf install "@C Development Tools and Libraries" openldap-devel \
     python3-devel python3-tox \
     lcov clang-analyzer valgrind
 
@@ -184,3 +184,5 @@ conda activate mydevenv
 pip install dogtag-pki
 pip install python-ldap
 $ openssl pkcs12 -nodes -in ca_admin_cert.p12 -out /tmp/ca_admin_cert.pem
+
+Refer to the python code for more details.
