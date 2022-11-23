@@ -14,7 +14,10 @@ go to downloads folder using cd command. Once you are in Downloads, use chmod u+
 Step 3: Make sure FQDN is set up properly
 -----------------------------------------
 Please follow the steps mentioned in - https://github.com/dogtagpki/pki/blob/master/docs/installation/server/FQDN_Configuration.adoc 
-To configure the FQDN - If /etc/hosts does not work, use /etc/hostname. Also, do not forgot to comment to existing lines. 
+To configure the FQDN - If /etc/hosts does not work, use /etc/hostname. 
+Command used:
+$ sudo vi /etc/hostname
+Press 'i' to insert. Once edited, press Esc,colon(:),wq to save the file. If done correctly, the output should change from fedora.local to pki.example.com 
 
 --------------------------------
 Step 4: Initialize the DS Server
@@ -47,7 +50,7 @@ Step 5: Initialize CA Sysyem
 To install PKI packages, execute the following command:
 $ sudo dnf install -y dogtag-pki
 
-ca.cfg From https://github.com/dogtagpki/pki/blob/master/base/server/examples/installation copy ca.cfg and save the file.
+From https://github.com/dogtagpki/pki/blob/master/base/server/examples/installation copy ca.cfg and save the file.
 
 Now, execute the following command:
 $ sudo pkispawn -f ca.cfg -s CA
